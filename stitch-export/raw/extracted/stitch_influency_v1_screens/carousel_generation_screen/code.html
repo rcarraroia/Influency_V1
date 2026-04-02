@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#660ce4",
+                        "background-light": "#f7f5f8",
+                        "background-dark": "#171022",
+                    },
+                    fontFamily: {
+                        "display": ["Plus Jakarta Sans", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.5rem",
+                        "lg": "1rem",
+                        "xl": "1.5rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<title>Criar Carrossel - Influency</title>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 flex justify-center items-start min-h-screen">
+<!-- Mobile Container (390x844 approx simulation) -->
+<div class="relative w-full max-w-[390px] min-h-[844px] bg-white dark:bg-background-dark shadow-2xl flex flex-col overflow-hidden border-x border-primary/10">
+<!-- Header -->
+<header class="bg-primary px-4 pt-12 pb-6 flex items-center gap-4 text-white">
+<button class="flex items-center justify-center p-1 rounded-full hover:bg-white/10 transition-colors">
+<span class="material-symbols-outlined">arrow_back</span>
+</button>
+<h1 class="text-xl font-bold tracking-tight">Criar Carrossel</h1>
+</header>
+<!-- Content Body -->
+<main class="flex-1 flex flex-col p-4 gap-6">
+<!-- Theme Section -->
+<section class="flex flex-col gap-2">
+<label class="text-slate-900 dark:text-slate-100 text-lg font-bold leading-tight tracking-[-0.015em]">Tema do carrossel</label>
+<div class="flex flex-col">
+<textarea class="form-input flex w-full resize-none overflow-hidden rounded-xl text-slate-900 dark:text-slate-100 focus:outline-0 focus:ring-2 focus:ring-primary/20 border border-primary/20 bg-background-light dark:bg-slate-800 focus:border-primary min-h-36 placeholder:text-slate-400 p-[15px] text-base font-normal leading-normal" placeholder="Sobre o que será seu carrossel? Ex: 5 dicas para crescer no Instagram"></textarea>
+</div>
+</section>
+<!-- Slides Count Section -->
+<section class="flex flex-col gap-4">
+<div class="flex items-center justify-between">
+<p class="text-slate-900 dark:text-slate-100 text-base font-medium leading-normal">Número de slides</p>
+<span class="text-primary font-bold text-sm bg-primary/10 px-3 py-1 rounded-full">5 slides</span>
+</div>
+<div class="flex h-6 w-full items-center gap-4">
+<div class="relative flex h-1.5 flex-1 rounded-full bg-primary/20">
+<div class="h-full w-[32%] rounded-full bg-primary"></div>
+<div class="absolute left-[32%] -top-1.5 size-4.5">
+<div class="size-4.5 bg-primary border-2 border-white rounded-full shadow-md -translate-x-1/2"></div>
+</div>
+</div>
+</div>
+<div class="flex justify-between text-xs text-slate-400 font-medium">
+<span>3</span>
+<span>10</span>
+</div>
+</section>
+<!-- Tip Card -->
+<div class="bg-primary/5 border border-primary/10 rounded-xl p-4 flex gap-3 items-start">
+<span class="material-symbols-outlined text-primary fill-current">lightbulb</span>
+<p class="text-sm text-slate-700 dark:text-slate-300 leading-relaxed">
+<span class="font-semibold text-primary">Dica:</span> Carrosséis com 5 a 7 slides costumam ter maior engajamento.
+                </p>
+</div>
+<!-- Spacer -->
+<div class="flex-1"></div>
+<!-- Generate Button -->
+<button class="w-full bg-primary hover:bg-primary/90 text-white font-bold py-4 rounded-xl shadow-lg shadow-primary/20 flex items-center justify-center gap-2 transition-transform active:scale-[0.98]">
+<span class="material-symbols-outlined">auto_awesome</span>
+                Gerar Carrossel
+            </button>
+</main>
+<!-- Bottom Navigation Bar -->
+<nav class="flex gap-2 border-t border-primary/10 bg-white dark:bg-background-dark px-4 pb-6 pt-2">
+<a class="flex flex-1 flex-col items-center justify-end gap-1 text-slate-400 dark:text-slate-500" href="#">
+<div class="flex h-8 items-center justify-center">
+<span class="material-symbols-outlined">home</span>
+</div>
+<p class="text-xs font-medium leading-normal tracking-[0.015em]">Início</p>
+</a>
+<a class="flex flex-1 flex-col items-center justify-end gap-1 text-primary" href="#">
+<div class="flex h-8 items-center justify-center">
+<span class="material-symbols-outlined fill-current">add_circle</span>
+</div>
+<p class="text-xs font-medium leading-normal tracking-[0.015em]">Criar</p>
+</a>
+<a class="flex flex-1 flex-col items-center justify-end gap-1 text-slate-400 dark:text-slate-500" href="#">
+<div class="flex h-8 items-center justify-center">
+<span class="material-symbols-outlined">auto_stories</span>
+</div>
+<p class="text-xs font-medium leading-normal tracking-[0.015em]">Biblioteca</p>
+</a>
+<a class="flex flex-1 flex-col items-center justify-end gap-1 text-slate-400 dark:text-slate-500" href="#">
+<div class="flex h-8 items-center justify-center">
+<span class="material-symbols-outlined">person</span>
+</div>
+<p class="text-xs font-medium leading-normal tracking-[0.015em]">Perfil</p>
+</a>
+</nav>
+<!-- iOS Indicator bar -->
+<div class="absolute bottom-1 left-1/2 -translate-x-1/2 w-32 h-1 bg-slate-200 dark:bg-slate-700 rounded-full"></div>
+</div>
+</body></html>

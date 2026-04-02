@@ -1,0 +1,72 @@
+{
+  "expo": {
+    "name": "Influency",
+    "slug": "influency-mobile",
+    "owner": "anonymous",
+    "version": "1.0.0",
+    "sdkVersion": "54.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "scheme": "influency",
+    "splash": {
+      "image": "./assets/splash-icon.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#6200EE"
+    },
+    "ios": {
+      "supportsTablet": false,
+      "bundleIdentifier": "com.renum.influency",
+      "infoPlist": {
+        "NSCameraUsageDescription": "O Influency precisa acessar sua câmera para gravar vídeos.",
+        "NSMicrophoneUsageDescription": "O Influency precisa acessar seu microfone para gravar áudio e reconhecimento de voz.",
+        "NSPhotoLibraryUsageDescription": "O Influency precisa acessar sua galeria para selecionar imagens.",
+        "NSSpeechRecognitionUsageDescription": "O Influency usa reconhecimento de voz para o assistente IA."
+      }
+    },
+    "android": {
+      "package": "com.renum.influency",
+      "adaptiveIcon": {
+        "backgroundColor": "#6200EE",
+        "foregroundImage": "./assets/android-icon-foreground.png",
+        "backgroundImage": "./assets/android-icon-background.png",
+        "monochromeImage": "./assets/android-icon-monochrome.png"
+      },
+      "permissions": [
+        "CAMERA",
+        "RECORD_AUDIO",
+        "READ_EXTERNAL_STORAGE",
+        "WRITE_EXTERNAL_STORAGE"
+      ],
+      "predictiveBackGestureEnabled": false
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      "expo-router",
+      "expo-secure-store",
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "O Influency precisa acessar sua câmera para gravar vídeos.",
+          "microphonePermission": "O Influency precisa acessar seu microfone para gravar áudio."
+        }
+      ],
+      [
+        "expo-av",
+        {
+          "microphonePermission": "O Influency precisa acessar seu microfone para gravar áudio e reconhecimento de voz."
+        }
+      ]
+    ],
+    "extra": {
+      "router": {
+        "origin": false
+      },
+      "eas": {
+        "projectId": "influency-v1"
+      }
+    }
+  }
+}

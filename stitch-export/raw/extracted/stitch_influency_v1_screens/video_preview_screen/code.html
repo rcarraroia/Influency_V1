@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+
+<html class="light" lang="pt-br"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Video Preview Screen</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#6506ea",
+                        "background-light": "#f7f5f8",
+                        "background-dark": "#170f23",
+                    },
+                    fontFamily: {
+                        "display": ["Plus Jakarta Sans"]
+                    },
+                    borderRadius: {"DEFAULT": "0.5rem", "lg": "1rem", "xl": "1.5rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>body {
+    font-family: "Plus Jakarta Sans", sans-serif
+    }
+.video-thumbnail {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(https://lh3.googleusercontent.com/aida-public/AB6AXuAp2BFtgQ9VY_Kfd20iF3GHFsbZR4Un5zhuKC39OBuXKM3wl6eMWAen2lB7VZJETNgaEhSgCjLC0isBCQAUvqiVw3NxnCjCLdAXnwRSJUjIam9AF4tXFEpQePLpgk1zewTQDFEOLJ9nQin0Me4xFDmSNB0so1p-IDBIyPSqVeUzgTeUXDd363YQDzW7QvBPaSoYXFtoyFCDGiIHB9-88wMRz8vhBeWQin1t-GO8Zv6kanmez5kBL7B4qFTbltfNZSbN4pmU8Y7qfZ1J);
+    background-size: cover;
+    background-position: center
+    }</style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark flex justify-center items-center min-h-screen">
+<!-- Mobile Container (390x844px approximation) -->
+<div class="relative w-[390px] h-[844px] bg-white dark:bg-slate-900 shadow-2xl overflow-hidden flex flex-col rounded-[3rem] border-[8px] border-slate-800">
+<!-- Header -->
+<div class="bg-primary px-6 pt-12 pb-6 flex items-center gap-4 text-white">
+<button class="flex items-center justify-center">
+<span class="material-symbols-outlined">arrow_back</span>
+</button>
+<h1 class="text-lg font-bold flex-1 text-center mr-6">Preview do Vídeo</h1>
+</div>
+<!-- Main Content Area -->
+<div class="flex-1 overflow-y-auto px-6 py-8 flex flex-col items-center">
+<!-- Video Player Component -->
+<div class="w-full aspect-[9/16] max-h-[450px] relative video-thumbnail rounded-xl overflow-hidden shadow-lg mb-4" data-alt="Influencer recording a video in a studio">
+<!-- Play Button Overlay -->
+<div class="absolute inset-0 flex items-center justify-center">
+<button class="w-16 h-16 bg-white/20 backdrop-blur-md border border-white/30 rounded-full flex items-center justify-center text-white">
+<span class="material-symbols-outlined !text-4xl fill-1">play_arrow</span>
+</button>
+</div>
+<!-- Timeline Bar -->
+<div class="absolute inset-x-0 bottom-0 p-4 bg-gradient-to-t from-black/60 to-transparent">
+<div class="flex items-center gap-2 mb-1">
+<div class="h-1 flex-1 bg-white/30 rounded-full relative">
+<div class="absolute top-0 left-0 h-full w-[40%] bg-primary rounded-full"></div>
+<div class="absolute top-1/2 left-[40%] -translate-y-1/2 -translate-x-1/2 w-3 h-3 bg-white rounded-full shadow"></div>
+</div>
+</div>
+<div class="flex justify-between text-[10px] text-white font-medium">
+<span>0:36</span>
+<span>1:30</span>
+</div>
+</div>
+</div>
+<!-- Duration Indicator -->
+<div class="mb-8">
+<span class="text-primary font-semibold text-lg">1:30</span>
+</div>
+<!-- Action Buttons -->
+<div class="w-full space-y-3">
+<button class="w-full h-14 bg-primary text-white font-bold rounded-xl shadow-md hover:bg-primary/90 transition-colors">
+                    Salvar e Editar
+                </button>
+<button class="w-full h-14 bg-transparent border-2 border-primary text-primary font-bold rounded-xl hover:bg-primary/5 transition-colors">
+                    Regravar
+                </button>
+<button class="w-full h-14 bg-transparent border-2 border-primary text-primary font-bold rounded-xl hover:bg-primary/5 transition-colors">
+                    Salvar sem Editar
+                </button>
+</div>
+</div>
+<!-- Bottom Navigation Bar -->
+<div class="border-t border-slate-100 dark:border-slate-800 bg-white dark:bg-slate-900 px-6 pb-8 pt-3 flex justify-between items-center">
+<a class="flex flex-col items-center gap-1 text-slate-400" href="#">
+<span class="material-symbols-outlined">home</span>
+<span class="text-[10px] font-medium">Home</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-primary" href="#">
+<span class="material-symbols-outlined !fill-1">videocam</span>
+<span class="text-[10px] font-medium">Gravar</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-slate-400" href="#">
+<span class="material-symbols-outlined">play_circle</span>
+<span class="text-[10px] font-medium">Vídeos</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-slate-400" href="#">
+<span class="material-symbols-outlined">person</span>
+<span class="text-[10px] font-medium">Perfil</span>
+</a>
+</div>
+<!-- iOS Indicator -->
+<div class="absolute bottom-2 left-1/2 -translate-x-1/2 w-32 h-1 bg-slate-200 dark:bg-slate-700 rounded-full"></div>
+</div>
+</body></html>

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Connect Social Networks</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#6400f0",
+                        "background-light": "#f7f5f8",
+                        "background-dark": "#170f23",
+                    },
+                    fontFamily: {
+                        "display": ["Plus Jakarta Sans", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.5rem",
+                        "lg": "1rem",
+                        "xl": "1.5rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+        .instagram-gradient {
+            background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark flex justify-center items-center min-h-screen">
+<!-- Mobile Container (390x844px approximation for preview) -->
+<div class="relative w-[390px] h-[844px] bg-white dark:bg-slate-900 shadow-2xl overflow-hidden flex flex-col">
+<!-- Top Bar -->
+<div class="flex items-center px-4 pt-6 pb-2">
+<button class="p-2 text-slate-900 dark:text-slate-100 hover:bg-primary/10 rounded-full transition-colors">
+<span class="material-symbols-outlined text-2xl">arrow_back</span>
+</button>
+</div>
+<!-- Header Section -->
+<div class="px-6 pt-2 pb-8">
+<h1 class="text-slate-900 dark:text-slate-100 text-2xl font-bold leading-tight tracking-tight">
+                Conecte suas redes sociais
+            </h1>
+<p class="text-slate-500 dark:text-slate-400 text-base mt-2">
+                Publique em todas de uma vez
+            </p>
+</div>
+<!-- Cards Container -->
+<div class="flex-1 px-6 space-y-4 overflow-y-auto">
+<!-- Instagram Card -->
+<div class="bg-white dark:bg-slate-800 p-4 rounded-xl shadow-sm border border-slate-100 dark:border-slate-700 flex items-center justify-between">
+<div class="flex items-center gap-4">
+<div class="instagram-gradient w-12 h-12 rounded-lg flex items-center justify-center text-white shadow-sm">
+<span class="material-symbols-outlined text-2xl">photo_camera</span>
+</div>
+<div>
+<h3 class="text-slate-900 dark:text-slate-100 font-semibold text-base">Instagram</h3>
+<p class="text-slate-500 dark:text-slate-400 text-sm">Conecte sua conta</p>
+</div>
+</div>
+<button class="bg-primary hover:bg-primary/90 text-white text-sm font-semibold px-4 py-2 rounded-lg transition-colors">
+                    Conectar
+                </button>
+</div>
+<!-- TikTok Card -->
+<div class="bg-white dark:bg-slate-800 p-4 rounded-xl shadow-sm border border-slate-100 dark:border-slate-700 flex items-center justify-between">
+<div class="flex items-center gap-4">
+<div class="bg-slate-900 w-12 h-12 rounded-lg flex items-center justify-center text-white shadow-sm">
+<span class="material-symbols-outlined text-2xl">music_note</span>
+</div>
+<div>
+<h3 class="text-slate-900 dark:text-slate-100 font-semibold text-base">TikTok</h3>
+<p class="text-slate-500 dark:text-slate-400 text-sm">Conecte sua conta</p>
+</div>
+</div>
+<button class="bg-primary hover:bg-primary/90 text-white text-sm font-semibold px-4 py-2 rounded-lg transition-colors">
+                    Conectar
+                </button>
+</div>
+<!-- Facebook Card -->
+<div class="bg-white dark:bg-slate-800 p-4 rounded-xl shadow-sm border border-slate-100 dark:border-slate-700 flex items-center justify-between">
+<div class="flex items-center gap-4">
+<div class="bg-[#1877F2] w-12 h-12 rounded-lg flex items-center justify-center text-white shadow-sm">
+<span class="material-symbols-outlined text-2xl">social_leaderboard</span>
+</div>
+<div>
+<h3 class="text-slate-900 dark:text-slate-100 font-semibold text-base">Facebook</h3>
+<p class="text-slate-500 dark:text-slate-400 text-sm">Conecte sua conta</p>
+</div>
+</div>
+<button class="bg-primary hover:bg-primary/90 text-white text-sm font-semibold px-4 py-2 rounded-lg transition-colors">
+                    Conectar
+                </button>
+</div>
+</div>
+<!-- Footer Section -->
+<div class="px-6 py-10 flex flex-col items-center">
+<button class="text-primary font-semibold text-base hover:bg-primary/5 px-6 py-2 rounded-lg transition-colors">
+                Pular por enquanto
+            </button>
+<!-- iOS Home Indicator simulation -->
+<div class="w-32 h-1 bg-slate-200 dark:bg-slate-700 rounded-full mt-8"></div>
+</div>
+</div>
+</body></html>

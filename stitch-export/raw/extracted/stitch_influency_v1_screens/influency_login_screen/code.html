@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+
+<html lang="pt-br"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#6400f0",
+                        "background-light": "#f7f5f8",
+                        "background-dark": "#170f23",
+                    },
+                    fontFamily: {
+                        "display": ["Plus Jakarta Sans", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark min-h-screen flex items-center justify-center p-4">
+<!-- Mobile Container (390x844 approx simulation) -->
+<div class="relative w-full max-w-[390px] min-h-[844px] bg-white dark:bg-slate-900 shadow-2xl rounded-[3rem] overflow-hidden flex flex-col border-[8px] border-slate-200 dark:border-slate-800">
+<!-- Status Bar Spacer (iOS Style) -->
+<div class="h-11 w-full"></div>
+<!-- Header Section -->
+<div class="flex flex-col items-center pt-8 pb-6 px-6">
+<div class="size-[60px] bg-primary/10 rounded-2xl flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-primary text-4xl" style="font-variation-settings: 'FILL' 1">
+                    auto_awesome
+                </span>
+</div>
+<h2 class="text-slate-900 dark:text-slate-100 text-2xl font-bold leading-tight tracking-tight text-center">
+                Bem-vinda de volta!
+            </h2>
+<p class="text-slate-500 dark:text-slate-400 text-sm font-normal mt-2 text-center">
+                Entre para criar conteúdo viral
+            </p>
+</div>
+<!-- Form Section -->
+<div class="flex-1 px-6 pt-4">
+<div class="space-y-4">
+<!-- Email Field -->
+<div class="flex flex-col gap-1.5">
+<label class="text-slate-500 dark:text-slate-400 text-[14px] font-medium ml-1">
+                        Email
+                    </label>
+<input class="w-full h-11 px-4 rounded-lg border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-900 dark:text-slate-100 focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all placeholder:text-slate-400" placeholder="seu@email.com" type="email"/>
+</div>
+<!-- Password Field -->
+<div class="flex flex-col gap-1.5">
+<label class="text-slate-500 dark:text-slate-400 text-[14px] font-medium ml-1">
+                        Senha
+                    </label>
+<div class="relative">
+<input class="w-full h-11 px-4 rounded-lg border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-900 dark:text-slate-100 focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all placeholder:text-slate-400" placeholder="••••••••" type="password"/>
+<button class="absolute right-3 top-1/2 -translate-y-1/2 text-slate-400 hover:text-slate-600 dark:hover:text-slate-200">
+<span class="material-symbols-outlined text-[20px]">visibility</span>
+</button>
+</div>
+</div>
+<!-- Forgot Password -->
+<div class="flex justify-end">
+<a class="text-primary text-[14px] font-semibold hover:underline" href="#">
+                        Esqueci minha senha
+                    </a>
+</div>
+<!-- Login Button -->
+<div class="pt-4">
+<button class="w-full h-11 bg-primary hover:bg-primary/90 text-white font-bold rounded-lg transition-colors shadow-lg shadow-primary/20">
+                        Entrar
+                    </button>
+</div>
+<!-- Social Divider (Optional but adds to MD3 look) -->
+<div class="flex items-center gap-4 py-4">
+<div class="h-[1px] flex-1 bg-slate-100 dark:bg-slate-800"></div>
+<span class="text-slate-400 text-xs font-medium uppercase tracking-widest">ou</span>
+<div class="h-[1px] flex-1 bg-slate-100 dark:bg-slate-800"></div>
+</div>
+<!-- Social Login Buttons -->
+<div class="grid grid-cols-2 gap-3">
+<button class="flex items-center justify-center h-11 border border-slate-200 dark:border-slate-700 rounded-lg bg-white dark:bg-slate-800 hover:bg-slate-50 dark:hover:bg-slate-700 transition-colors">
+<img alt="Google Logo" class="size-5" data-alt="Google logo icon for social login" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBkxsk7bp3VVthF0xz38hmrC0_7MZh-w3w3zEqa_sPp7uPpRffTNPWteDCFo_ENh4Jst0qDAT4vsKdhgmi_Jy6AtQQPlCN39ieqrUH_pFEsofQ5Z09HjucRsTANVBLkDTCY7zBcWJnlo_yKuveu9TgTpEVRFL4s65_eUAZ2lb203-TcVTA3crAQc_VlA3FE7mCdPQWguJkktEgVqozmJQ-Xak5S3NC1eztgRPvppDivLljuAsi0FcJydxfzQZxcOP7Ranqqvg4QbwNN"/>
+</button>
+<button class="flex items-center justify-center h-11 border border-slate-200 dark:border-slate-700 rounded-lg bg-white dark:bg-slate-800 hover:bg-slate-50 dark:hover:bg-slate-700 transition-colors">
+<span class="material-symbols-outlined text-slate-900 dark:text-white">ios</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Footer Section -->
+<div class="pb-10 pt-6 px-6 text-center">
+<p class="text-slate-500 dark:text-slate-400 text-sm">
+                Não tem conta? 
+                <a class="text-primary font-bold hover:underline ml-1" href="#">Criar conta</a>
+</p>
+</div>
+<!-- iOS Home Indicator -->
+<div class="absolute bottom-2 left-1/2 -translate-x-1/2 w-32 h-1.5 bg-slate-200 dark:bg-slate-700 rounded-full"></div>
+</div>
+</body></html>

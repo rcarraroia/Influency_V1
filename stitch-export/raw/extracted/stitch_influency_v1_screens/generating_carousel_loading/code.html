@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+
+<html lang="pt-br"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#660ce4",
+                        "background-light": "#f7f5f8",
+                        "background-dark": "#171022",
+                    },
+                    fontFamily: {
+                        "display": ["Plus Jakarta Sans", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.5rem", "lg": "1rem", "xl": "1.5rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+        .circular-loader {
+            border: 4px solid rgba(102, 12, 228, 0.1);
+            border-left-color: #660ce4;
+            border-radius: 50%;
+            width: 80px;
+            height: 80px;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark flex items-center justify-center min-h-screen">
+<!-- Mobile Container (390x844px) -->
+<div class="relative w-[390px] h-[844px] bg-white dark:bg-slate-950 shadow-2xl overflow-hidden flex flex-col">
+<!-- TopAppBar -->
+<div class="flex items-center p-4 pb-2 justify-between">
+<button class="text-slate-900 dark:text-slate-100 flex size-12 shrink-0 items-center justify-start">
+<span class="material-symbols-outlined text-2xl">close</span>
+</button>
+<h2 class="text-slate-900 dark:text-slate-100 text-lg font-bold leading-tight tracking-tight flex-1 text-center pr-12">Influency</h2>
+</div>
+<div class="flex-1 flex flex-col items-center justify-center px-8">
+<!-- Central Animation -->
+<div class="relative mb-12 flex items-center justify-center">
+<div class="circular-loader"></div>
+<div class="absolute inset-0 flex items-center justify-center">
+<span class="material-symbols-outlined text-primary text-3xl">auto_awesome</span>
+</div>
+</div>
+<!-- Main Heading -->
+<h3 class="text-slate-900 dark:text-slate-100 tracking-tight text-2xl font-bold leading-tight text-center mb-8">
+                Gerando carrossel...
+            </h3>
+<!-- Progress Section -->
+<div class="w-full flex flex-col gap-3 mb-10">
+<div class="flex justify-between items-end">
+<p class="text-slate-700 dark:text-slate-300 text-base font-medium">Progresso da IA</p>
+<p class="text-primary text-xl font-bold">45%</p>
+</div>
+<div class="w-full h-3 rounded-full bg-primary/10 overflow-hidden">
+<div class="h-full bg-primary rounded-full" style="width: 45%;"></div>
+</div>
+</div>
+<!-- Status Messages -->
+<div class="space-y-3">
+<p class="text-slate-900 dark:text-slate-100 text-base font-medium leading-normal text-center">
+                    Criando slides otimizados para Instagram
+                </p>
+<p class="text-slate-500 dark:text-slate-400 text-sm font-normal leading-normal text-center">
+                    Isso pode levar alguns segundos
+                </p>
+</div>
+</div>
+<!-- Visual Decoration Element -->
+<div class="absolute -bottom-20 -left-20 w-64 h-64 bg-primary/5 rounded-full blur-3xl"></div>
+<div class="absolute -top-20 -right-20 w-64 h-64 bg-primary/5 rounded-full blur-3xl"></div>
+<!-- Footer Branding/Instruction -->
+<div class="p-8 text-center">
+<div class="flex items-center justify-center gap-2 text-primary/40 text-xs font-semibold uppercase tracking-widest">
+<span class="material-symbols-outlined text-sm">bolt</span>
+                Powered by Influency AI
+            </div>
+</div>
+</div>
+</body></html>

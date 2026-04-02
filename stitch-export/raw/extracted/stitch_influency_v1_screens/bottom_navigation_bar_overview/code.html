@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+
+<html class="light" lang="pt-br"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#6400f0",
+              "background-light": "#f7f5f8",
+              "background-dark": "#170f23",
+            },
+            fontFamily: {
+              "display": ["Plus Jakarta Sans"]
+            },
+            borderRadius: {"DEFAULT": "0.5rem", "lg": "1rem", "xl": "1.5rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+        .iphone-canvas {
+            width: 390px;
+            height: 844px;
+            box-shadow: 0 0 0 12px #1f1f1f, 0 0 0 15px #333;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-slate-200 flex items-center justify-center min-h-screen">
+<div class="iphone-canvas relative bg-background-light dark:bg-background-dark overflow-hidden rounded-[3rem]">
+<div class="absolute top-0 w-full h-8 flex justify-center items-end z-20">
+<div class="w-32 h-6 bg-black rounded-b-2xl"></div>
+</div>
+<div class="flex items-center bg-background-light dark:bg-background-dark p-4 pt-12 justify-between">
+<div class="text-slate-900 dark:text-slate-100 flex size-12 shrink-0 items-center justify-center">
+<span class="material-symbols-outlined">menu</span>
+</div>
+<h2 class="text-slate-900 dark:text-slate-100 text-lg font-bold leading-tight tracking-[-0.015em] flex-1 text-center">Influency</h2>
+<div class="size-12"></div>
+</div>
+<div class="flex flex-col p-6 h-[calc(844px-150px)] justify-center">
+<div class="flex flex-col items-center gap-6 rounded-xl border-2 border-dashed border-primary/20 bg-primary/5 px-6 py-14">
+<div class="flex max-w-[480px] flex-col items-center gap-2">
+<div class="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mb-2">
+<span class="material-symbols-outlined text-primary text-3xl">smart_toy</span>
+</div>
+<p class="text-slate-900 dark:text-slate-100 text-lg font-bold leading-tight tracking-[-0.015em] text-center">Área do Assistente</p>
+<p class="text-slate-600 dark:text-slate-400 text-sm font-normal leading-normal text-center">
+                        Esta tela destaca o componente de navegação inferior global do aplicativo Influency.
+                    </p>
+</div>
+<button class="flex min-w-[140px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-11 px-6 bg-primary text-white text-sm font-bold leading-normal tracking-[0.015em] shadow-lg shadow-primary/25">
+<span class="truncate">Iniciar Chat</span>
+</button>
+</div>
+</div>
+<div class="absolute bottom-0 w-full bg-white dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800 pb-8 pt-2 shadow-[0_-4px_12px_rgba(0,0,0,0.05)]">
+<div class="flex gap-2 px-4">
+<a class="flex flex-1 flex-col items-center justify-center gap-1 py-1" href="#">
+<div class="text-primary flex h-8 items-center justify-center">
+<span class="material-symbols-outlined fill-1" style="font-variation-settings: 'FILL' 1;">chat_bubble</span>
+</div>
+<p class="text-primary text-[10px] font-bold leading-normal tracking-wide">Assistente</p>
+</a>
+<a class="flex flex-1 flex-col items-center justify-center gap-1 py-1 text-slate-400 dark:text-slate-500" href="#">
+<div class="flex h-8 items-center justify-center">
+<span class="material-symbols-outlined">folder</span>
+</div>
+<p class="text-[10px] font-medium leading-normal tracking-wide">Biblioteca</p>
+</a>
+<a class="flex flex-1 flex-col items-center justify-center gap-1 py-1 text-slate-400 dark:text-slate-500" href="#">
+<div class="flex h-8 items-center justify-center">
+<span class="material-symbols-outlined">settings</span>
+</div>
+<p class="text-[10px] font-medium leading-normal tracking-wide">Ajustes</p>
+</a>
+</div>
+<div class="flex justify-center mt-4">
+<div class="w-32 h-1 bg-slate-300 dark:bg-slate-700 rounded-full opacity-50"></div>
+</div>
+</div>
+</div>
+</body></html>

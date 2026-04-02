@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+
+<html lang="pt-br"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Roboto:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#a400f0",
+                        "background-light": "#f7f5f8",
+                        "background-dark": "#1d0f23",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "Roboto", "sans-serif"],
+                        "roboto": ["Roboto", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Roboto', sans-serif;
+        }
+        .slider-thumb::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 18px;
+            height: 18px;
+            background: #a400f0;
+            border-radius: 50%;
+            cursor: pointer;
+            border: 2px solid white;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-slate-200 flex items-center justify-center min-h-screen">
+<!-- Mobile Screen Container (390x844) -->
+<div class="relative w-[390px] h-[844px] bg-white overflow-hidden shadow-2xl rounded-[32px] border-[8px] border-slate-800">
+<!-- Mock Background Content (Influency App Interface) -->
+<div class="absolute inset-0 p-6 bg-background-light">
+<div class="flex items-center justify-between mb-8">
+<div class="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center">
+<span class="material-symbols-outlined text-primary">person</span>
+</div>
+<div class="h-6 w-24 bg-slate-200 rounded-full"></div>
+<span class="material-symbols-outlined text-slate-400">notifications</span>
+</div>
+<div class="space-y-4">
+<div class="h-40 w-full bg-slate-200 rounded-xl"></div>
+<div class="h-4 w-3/4 bg-slate-200 rounded"></div>
+<div class="h-4 w-1/2 bg-slate-200 rounded"></div>
+<div class="grid grid-cols-2 gap-4 pt-4">
+<div class="h-32 bg-slate-200 rounded-xl"></div>
+<div class="h-32 bg-slate-200 rounded-xl"></div>
+</div>
+</div>
+</div>
+<!-- Semi-transparent Overlay -->
+<div class="absolute inset-0 bg-black/50 z-10 flex flex-col justify-end">
+<!-- Bottom Sheet Modal Card -->
+<div class="bg-white rounded-t-[24px] w-full px-6 pt-2 pb-10 shadow-2xl animate-slide-up">
+<!-- BottomSheetHandle -->
+<div class="flex w-full items-center justify-center py-3">
+<div class="h-1.5 w-12 rounded-full bg-slate-200"></div>
+</div>
+<!-- Header -->
+<div class="flex items-center justify-between mb-6">
+<h2 class="text-[#170c1d] text-[24px] font-semibold leading-tight font-roboto">Criar Roteiro</h2>
+<button class="flex items-center justify-center w-10 h-10 rounded-full hover:bg-slate-100 transition-colors">
+<span class="material-symbols-outlined text-slate-600" style="font-size: 24px;">close</span>
+</button>
+</div>
+<!-- Topic Input Section -->
+<div class="space-y-2 mb-6">
+<label class="block text-slate-800 text-base font-medium font-roboto">
+                        Sobre o que você quer falar?
+                    </label>
+<div class="relative">
+<textarea class="w-full h-[120px] p-4 bg-white border border-slate-200 rounded-lg text-slate-900 placeholder:text-slate-400 focus:ring-2 focus:ring-primary focus:border-transparent resize-none font-roboto text-base leading-relaxed" placeholder="Ex: Dicas de produtividade para empreendedores">5 estratégias de marketing digital para pequenos negócios</textarea>
+<span class="absolute bottom-3 right-3 text-slate-400 text-xs font-medium">
+                            60/500
+                        </span>
+</div>
+</div>
+<!-- Duration Slider Section -->
+<div class="mb-8">
+<div class="flex justify-between items-center mb-4">
+<span class="text-slate-800 text-base font-medium font-roboto">Duração do vídeo</span>
+<span class="text-primary font-bold text-base bg-primary/10 px-3 py-1 rounded-full">90 segundos</span>
+</div>
+<div class="relative px-1">
+<input class="w-full h-1.5 bg-slate-100 rounded-lg appearance-none cursor-pointer slider-thumb accent-primary" max="300" min="30" step="30" type="range" value="90"/>
+<div class="flex justify-between mt-3 px-1">
+<span class="text-[10px] text-slate-400 font-medium">30s</span>
+<span class="text-[10px] text-slate-400 font-medium">60s</span>
+<span class="text-[10px] text-slate-400 font-medium">90s</span>
+<span class="text-[10px] text-slate-400 font-medium">120s</span>
+<span class="text-[10px] text-slate-400 font-medium">180s</span>
+<span class="text-[10px] text-slate-400 font-medium">300s</span>
+</div>
+</div>
+</div>
+<!-- Tip Card -->
+<div class="bg-[#F3E5F5] border-l-4 border-primary rounded-lg p-4 flex gap-3 mb-8">
+<span class="material-symbols-outlined text-primary flex-shrink-0" style="font-variation-settings: 'FILL' 1">lightbulb</span>
+<p class="text-slate-800 text-sm leading-tight font-roboto">
+<span class="font-bold text-primary">Dica:</span> Seja específico sobre seu público-alvo e objetivo do vídeo para roteiros mais personalizados.
+                    </p>
+</div>
+<!-- Action Button -->
+<button class="w-full h-[52px] bg-primary hover:bg-primary/90 text-white font-bold text-base rounded-xl flex items-center justify-center gap-2 transition-all shadow-lg shadow-primary/20 active:scale-[0.98]">
+<span class="material-symbols-outlined" style="font-size: 20px;">auto_awesome</span>
+                    Gerar Roteiro
+                </button>
+<!-- iOS Home Indicator Mockup -->
+<div class="w-32 h-1 bg-slate-900/20 rounded-full mx-auto mt-6"></div>
+</div>
+</div>
+<!-- Status Bar Mockup -->
+<div class="absolute top-0 w-full h-12 flex items-center justify-between px-8 z-50">
+<span class="text-sm font-bold">9:41</span>
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined" style="font-size: 16px;">signal_cellular_4_bar</span>
+<span class="material-symbols-outlined" style="font-size: 16px;">wifi</span>
+<span class="material-symbols-outlined" style="font-size: 20px;">battery_full</span>
+</div>
+</div>
+</div>
+</body></html>

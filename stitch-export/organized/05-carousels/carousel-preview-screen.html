@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+
+<html class="light" lang="pt-br"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#660ce4",
+                        "background-light": "#f5f5f5",
+                        "background-dark": "#171022",
+                    },
+                    fontFamily: {
+                        "display": ["Plus Jakarta Sans", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.5rem", "lg": "1rem", "xl": "1.5rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 antialiased">
+<!-- Mobile Container (390x844px approximation) -->
+<div class="relative mx-auto min-h-screen max-w-[390px] flex flex-col bg-background-light dark:bg-background-dark shadow-2xl overflow-hidden">
+<!-- Header -->
+<header class="bg-primary px-4 py-6 flex items-center justify-between text-white sticky top-0 z-10">
+<button class="flex items-center justify-center">
+<span class="material-symbols-outlined text-2xl">arrow_back_ios</span>
+</button>
+<h1 class="text-lg font-bold">Preview do Carrossel</h1>
+<button class="flex items-center justify-center">
+<span class="material-symbols-outlined text-2xl">more_horiz</span>
+</button>
+</header>
+<!-- Main Content -->
+<main class="flex-1 overflow-y-auto hide-scrollbar flex flex-col items-center">
+<!-- Carousel Swiper Section -->
+<div class="w-full px-6 pt-8 pb-4">
+<div class="relative w-full aspect-[4/5] bg-white dark:bg-slate-800 rounded-xl shadow-lg overflow-hidden border border-slate-200 dark:border-slate-700">
+<!-- Slide Image -->
+<div class="w-full h-3/5 bg-slate-200 dark:bg-slate-700 relative">
+<img alt="Social media content creator background" class="w-full h-full object-cover" data-alt="Modern aesthetic social media post background with gradient shapes" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBjXJLXCPiuGb4RPVLTWk9ujccxkOG84xEaZwbH9gUhWTTKk9hWihj3PLPROSohrhqnX5lhYa-K7lBaofJl5cu5HhZQhIS3DUDpPz9R5FIIyqXrpwlhk12NFyGp8UxVg710qaAXC90-0MYIXzcrOwlNIaZIuWUSdRdXyvNmU6Z5YgCD8YKiO-jaXYSByN04Xn6xInzU8_1ywbkPHXyf21tvihSGbSR23Iyb69f5ae-fPNCgSDYofOcHCgmcySQqGHcb4wsihpcrL6g8"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
+</div>
+<!-- Slide Text Content -->
+<div class="p-6 flex flex-col justify-center items-center text-center h-2/5">
+<h2 class="text-2xl font-extrabold text-slate-900 dark:text-white leading-tight">
+                            Como aumentar seu engajamento em 2024
+                        </h2>
+<p class="mt-2 text-primary font-medium">Slide 1 de 5</p>
+</div>
+</div>
+</div>
+<!-- Indicators -->
+<div class="flex flex-col items-center gap-2 mb-6">
+<div class="flex items-center justify-center gap-2">
+<div class="h-2 w-6 rounded-full bg-primary"></div>
+<div class="h-2 w-2 rounded-full bg-primary/30"></div>
+<div class="h-2 w-2 rounded-full bg-primary/30"></div>
+<div class="h-2 w-2 rounded-full bg-primary/30"></div>
+<div class="h-2 w-2 rounded-full bg-primary/30"></div>
+</div>
+<p class="text-slate-500 dark:text-slate-400 text-sm font-medium">1/5</p>
+</div>
+<!-- Action Buttons -->
+<div class="w-full px-6 space-y-3 mb-10">
+<button class="w-full py-4 px-6 rounded-xl border-2 border-primary text-primary font-bold flex items-center justify-center gap-2 hover:bg-primary/5 transition-colors">
+<span class="material-symbols-outlined text-xl">edit</span>
+                    Editar Slide
+                </button>
+<button class="w-full py-4 px-6 rounded-xl border-2 border-primary text-primary font-bold flex items-center justify-center gap-2 hover:bg-primary/5 transition-colors">
+<span class="material-symbols-outlined text-xl">image</span>
+                    Trocar Imagem
+                </button>
+<button class="w-full py-4 px-6 rounded-xl bg-primary text-white font-bold flex items-center justify-center gap-2 shadow-lg shadow-primary/25 active:scale-[0.98] transition-all">
+<span class="material-symbols-outlined text-xl">send</span>
+                    Publicar
+                </button>
+</div>
+</main>
+<!-- Bottom Navigation Bar -->
+<nav class="border-t border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 px-4 pb-6 pt-2 flex justify-between items-center">
+<a class="flex flex-1 flex-col items-center justify-center gap-1 text-slate-400 dark:text-slate-500" href="#">
+<span class="material-symbols-outlined">home</span>
+<span class="text-[10px] font-medium">Início</span>
+</a>
+<a class="flex flex-1 flex-col items-center justify-center gap-1 text-primary" href="#">
+<span class="material-symbols-outlined">add_circle</span>
+<span class="text-[10px] font-medium">Criar</span>
+</a>
+<a class="flex flex-1 flex-col items-center justify-center gap-1 text-slate-400 dark:text-slate-500" href="#">
+<span class="material-symbols-outlined">auto_awesome_motion</span>
+<span class="text-[10px] font-medium">Projetos</span>
+</a>
+<a class="flex flex-1 flex-col items-center justify-center gap-1 text-slate-400 dark:text-slate-500" href="#">
+<span class="material-symbols-outlined">analytics</span>
+<span class="text-[10px] font-medium">Dados</span>
+</a>
+<a class="flex flex-1 flex-col items-center justify-center gap-1 text-slate-400 dark:text-slate-500" href="#">
+<span class="material-symbols-outlined">person</span>
+<span class="text-[10px] font-medium">Perfil</span>
+</a>
+</nav>
+<!-- Safe Area iOS Indicator -->
+<div class="h-1 bg-background-light dark:bg-background-dark w-full"></div>
+</div>
+</body></html>

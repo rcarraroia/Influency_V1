@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+
+<html class="light" lang="pt-br"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#660ce4",
+                        "background-light": "#f7f5f8",
+                        "background-dark": "#171022",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.5rem", "lg": "1rem", "xl": "1.5rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .ios-toggle:checked + .ios-switch-bg {
+            background-color: #660ce4;
+        }
+        .ios-toggle:checked + .ios-switch-bg .ios-switch-dot {
+            transform: translateX(20px);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-slate-200 flex justify-center items-center min-h-screen">
+<!-- Mobile Container (iPhone 14/15 size approx) -->
+<div class="relative w-[390px] h-[844px] bg-background-light dark:bg-background-dark shadow-2xl overflow-hidden rounded-[3rem] border-[8px] border-slate-900">
+<!-- Status Bar Simulation -->
+<div class="flex justify-between items-center px-8 pt-4 pb-2 text-slate-900 dark:text-slate-100 font-semibold text-sm">
+<span>9:41</span>
+<div class="flex gap-1 items-center">
+<span class="material-symbols-outlined text-sm">signal_cellular_alt</span>
+<span class="material-symbols-outlined text-sm">wifi</span>
+<span class="material-symbols-outlined text-sm">battery_full</span>
+</div>
+</div>
+<!-- Bottom Sheet / Modal Content -->
+<div class="flex h-full w-full flex-col justify-end">
+<!-- Modal Background Overlay (Simulated) -->
+<div class="absolute inset-0 bg-black/20 z-0"></div>
+<!-- Actual Modal Content -->
+<div class="relative z-10 flex flex-col items-stretch bg-background-light dark:bg-background-dark rounded-t-xl shadow-2xl">
+<!-- BottomSheetHandle -->
+<button class="flex h-6 w-full items-center justify-center">
+<div class="h-1.5 w-10 rounded-full bg-primary/20 dark:bg-primary/40"></div>
+</button>
+<!-- Header -->
+<div class="flex items-center px-4 pb-4 justify-between">
+<div class="text-slate-900 dark:text-slate-100 flex size-10 shrink-0 items-center justify-start">
+<span class="material-symbols-outlined cursor-pointer">close</span>
+</div>
+<h2 class="text-slate-900 dark:text-slate-100 text-lg font-bold leading-tight flex-1 text-center">Configurar Asset</h2>
+<div class="flex w-10 items-center justify-end">
+<button class="text-slate-900 dark:text-slate-100">
+<span class="material-symbols-outlined">more_horiz</span>
+</button>
+</div>
+</div>
+<!-- Video Preview -->
+<div class="p-4 pt-0">
+<div class="relative flex items-center justify-center bg-slate-300 dark:bg-slate-800 bg-cover bg-center aspect-video rounded-xl overflow-hidden shadow-inner group" data-alt="Video preview showing a brand watermark in the corner" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAOrwcHBdK8qmu_tk9B3X6Fn3vAXXquCoeDsXAKgGtUk6gPm_0V0fs2z2wrFhImh4-ABWh6p8krdNREYXYBxKxfUgI-tazoBjAALUxXMvHn2rcjXTc79b283po4vxdro306AsT35KU0WGGGFnzuZTD2AYboXnQ3nHJL5kbKaDgB4gIuPxukb0oqZ5LHhkRIEIh85rIYqWSAPTLiWRwn45gGgs6AvTxH1kBjR730p-qVq-nNnuywa18ZQVzIzsRWBCUp2HaLmtWz7zIg");'>
+<!-- Watermark Overlay (Visual Representation) -->
+<div class="absolute top-3 right-3 bg-white/30 backdrop-blur-md p-2 rounded-lg border border-white/20">
+<div class="w-8 h-8 bg-primary rounded-md flex items-center justify-center text-[8px] text-white font-bold">LOGO</div>
+</div>
+<button class="flex shrink-0 items-center justify-center rounded-full size-14 bg-black/40 text-white backdrop-blur-sm transition-transform active:scale-95">
+<span class="material-symbols-outlined text-4xl fill-1">play_arrow</span>
+</button>
+</div>
+</div>
+<!-- Controls Scrollable Area -->
+<div class="px-4 pb-8 space-y-6 overflow-y-auto max-h-[450px]">
+<!-- Posição Dropdown -->
+<div class="flex flex-col gap-2">
+<p class="text-slate-900 dark:text-slate-100 text-sm font-semibold">Posição</p>
+<div class="relative">
+<select class="appearance-none w-full rounded-xl text-slate-900 dark:text-slate-100 border border-primary/20 bg-white dark:bg-slate-900 px-4 h-14 text-base focus:ring-primary focus:border-primary">
+<option>Canto superior esquerdo</option>
+<option selected="">Canto superior direito</option>
+<option>Canto inferior esquerdo</option>
+<option>Canto inferior direito</option>
+<option>Centro</option>
+</select>
+<span class="material-symbols-outlined absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none text-primary">expand_more</span>
+</div>
+</div>
+<!-- Opacidade Slider -->
+<div class="flex flex-col gap-3">
+<div class="flex justify-between items-center">
+<p class="text-slate-900 dark:text-slate-100 text-sm font-semibold">Opacidade</p>
+<span class="text-primary text-sm font-bold bg-primary/10 px-2 py-0.5 rounded-md">80%</span>
+</div>
+<div class="relative flex h-6 w-full items-center">
+<div class="h-1.5 w-full rounded-full bg-primary/10 dark:bg-slate-800">
+<div class="h-full w-[80%] rounded-full bg-primary relative">
+<div class="absolute -right-2.5 -top-2 size-5 rounded-full bg-white border-2 border-primary shadow-sm"></div>
+</div>
+</div>
+</div>
+</div>
+<!-- Duração Slider -->
+<div class="flex flex-col gap-3">
+<div class="flex justify-between items-center">
+<p class="text-slate-900 dark:text-slate-100 text-sm font-semibold">Duração</p>
+<span class="text-primary text-sm font-bold bg-primary/10 px-2 py-0.5 rounded-md">3s</span>
+</div>
+<div class="relative flex h-6 w-full items-center">
+<div class="h-1.5 w-full rounded-full bg-primary/10 dark:bg-slate-800">
+<div class="h-full w-[30%] rounded-full bg-primary relative">
+<div class="absolute -right-2.5 -top-2 size-5 rounded-full bg-white border-2 border-primary shadow-sm"></div>
+</div>
+</div>
+</div>
+</div>
+<!-- Toggle Apply Automatically -->
+<div class="flex items-center justify-between py-2 border-t border-primary/5">
+<div>
+<p class="text-slate-900 dark:text-slate-100 text-sm font-semibold">Aplicar automaticamente</p>
+<p class="text-slate-500 dark:text-slate-400 text-xs">Usa esta config. em novos vídeos</p>
+</div>
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only ios-toggle" type="checkbox" value=""/>
+<div class="w-11 h-6 bg-slate-200 dark:bg-slate-700 rounded-full transition-colors ios-switch-bg">
+<div class="ios-switch-dot absolute top-[2px] left-[2px] bg-white border-slate-300 dark:border-slate-600 border rounded-full h-5 w-5 transition-transform"></div>
+</div>
+</label>
+</div>
+<!-- Footer Action Buttons -->
+<div class="flex gap-3 pt-2">
+<button class="flex-1 h-12 rounded-xl border border-primary/20 text-slate-700 dark:text-slate-300 font-bold text-sm bg-white dark:bg-slate-900 active:bg-slate-50">
+                            Cancelar
+                        </button>
+<button class="flex-1 h-12 rounded-xl bg-primary text-white font-bold text-sm shadow-lg shadow-primary/30 active:scale-[0.98] transition-transform">
+                            Salvar
+                        </button>
+</div>
+</div>
+<!-- iOS Home Indicator -->
+<div class="flex justify-center pb-2">
+<div class="w-32 h-1.5 bg-slate-300 dark:bg-slate-700 rounded-full"></div>
+</div>
+</div>
+</div>
+</div>
+</body></html>

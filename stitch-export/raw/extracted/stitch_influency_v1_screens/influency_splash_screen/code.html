@@ -1,0 +1,98 @@
+<html class="dark"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Roboto:wght@400;500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#6400f0",
+            "background-light": "#f7f5f8",
+            "background-dark": "#170f23",
+          },
+          fontFamily: {
+            "display": ["Inter"],
+            "roboto": ["Roboto"]
+          },
+          borderRadius: {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+        },
+      },
+    }
+  </script>
+<style>
+    /* Custom gradient for splash screen following user request */
+    .splash-gradient {
+      background: linear-gradient(to bottom, #6200EE, #7F39FB);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display antialiased">
+<!-- Mobile Container (390x844 approx) -->
+<div class="relative mx-auto h-[844px] w-[390px] overflow-hidden shadow-2xl splash-gradient">
+<!-- Top Status Bar Placeholder (iOS Style) -->
+<div class="flex justify-between items-center px-8 pt-4 text-white/90">
+<span class="text-sm font-semibold">9:41</span>
+<div class="flex gap-1.5 items-center">
+<span class="material-symbols-outlined text-[18px]">signal_cellular_4_bar</span>
+<span class="material-symbols-outlined text-[18px]">wifi</span>
+<span class="material-symbols-outlined text-[20px]">battery_full</span>
+</div>
+</div>
+<!-- Center Content -->
+<div class="flex flex-col items-center justify-center h-full -mt-10">
+<!-- Logo Container -->
+<div class="w-[120px] h-[120px] bg-white rounded-xl shadow-lg flex items-center justify-center p-4">
+<h1 class="text-[#6200EE] font-bold text-[14px] tracking-widest text-center leading-tight">
+          INFLUENCY
+        </h1>
+</div>
+<!-- Loading Indicator -->
+<div class="mt-8 flex flex-col items-center">
+<div class="w-6 h-6 border-2 border-white/30 border-t-white rounded-full animate-[spin_1s_linear_infinite]"></div>
+</div>
+</div>
+<!-- Footer -->
+<div class="absolute bottom-10 left-0 w-full flex justify-center">
+<p class="text-white/80 font-roboto text-[12px] tracking-wide">
+        v2.0.0
+      </p>
+</div>
+<!-- iOS Home Indicator -->
+<div class="absolute bottom-2 left-1/2 -translate-x-1/2 w-32 h-1 bg-white/40 rounded-full"></div>
+<!-- Content from Components List (Modified for Splash Context) -->
+<!-- Hidden or adapted components can go here if needed, but the prompt asks for a specific splash design -->
+<div class="hidden">
+<div class="relative flex h-auto min-h-screen w-full flex-col bg-background-dark dark group/design-root overflow-x-hidden">
+<div class="flex items-center bg-background-dark p-4 pb-2 justify-end"></div>
+<div class="@container">
+<div class="@[480px]:px-4 @[480px]:py-3">
+<div class="w-full bg-center bg-no-repeat bg-cover flex flex-col justify-end overflow-hidden bg-background-dark @[480px]:rounded-lg min-h-[218px]" data-alt="Abstract purple geometric pattern with glowing accents" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAsBI9hwjjCqX5NQfbm-aEeq0RlsyA7zYaLMtDPGmZkwhVdEddMvDB6S_88jEwUMcJjsWu4nd-kFnCKL6WJxSiL9n8VFlBZ3rIMEejjIOiyfdvZoZg254qrTO7q6tLUsrhscqsOiAtcr0qgLrCJEj2qSSXpjMiT1htszCYDdUmMkkMKS8iPBmtyK5gOxM-IalTUam6sDoLOrhtT9iMs6kVOQO0bu_n2X1dgx8VQRTXOxqyz3o6EEy-ewROp-VE_JBjipPNlmuqTH_Nj");'>
+</div>
+</div>
+</div>
+<h2 class="text-slate-100 tracking-light text-[28px] font-bold leading-tight px-4 text-center pb-3 pt-5">INFLUENCY</h2>
+<div class="flex flex-col gap-3 p-4">
+<div class="flex gap-6 justify-between"><p class="text-slate-100 text-base font-medium leading-normal">Loading...</p></div>
+<div class="rounded bg-primary/20"><div class="h-2 rounded bg-primary" style="width: 30%;"></div></div>
+</div>
+<p class="text-primary text-sm font-normal leading-normal pb-3 pt-1 px-4 text-center">v2.0.0</p>
+<div class="h-5 bg-background-dark"></div>
+</div>
+</div>
+</div>
+</body></html>

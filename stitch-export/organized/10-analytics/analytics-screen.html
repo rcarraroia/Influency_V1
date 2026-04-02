@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#660ce4",
+                        "background-light": "#f7f5f8",
+                        "background-dark": "#171022",
+                    },
+                    fontFamily: {
+                        "display": ["Plus Jakarta Sans"]
+                    },
+                    borderRadius: {"DEFAULT": "0.5rem", "lg": "1rem", "xl": "1.5rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        body { font-family: 'Plus Jakarta Sans', sans-serif; }
+        .hide-scrollbar::-webkit-scrollbar { display: none; }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display">
+<div class="mx-auto min-h-screen max-w-[390px] bg-background-light dark:bg-background-dark overflow-x-hidden pb-20">
+<header class="bg-primary p-4 pt-12 text-white">
+<div class="flex items-center justify-between">
+<button class="flex items-center justify-center p-2">
+<span class="material-symbols-outlined">arrow_back_ios</span>
+</button>
+<h1 class="text-xl font-bold">Analytics</h1>
+<button class="flex items-center justify-center p-2">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+</div>
+</header>
+<main class="p-4 space-y-6">
+<div class="flex items-center justify-between bg-white dark:bg-slate-800 p-3 rounded-xl shadow-sm border border-primary/10">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">calendar_today</span>
+<span class="text-sm font-medium text-slate-700 dark:text-slate-200">Últimos 7 dias</span>
+</div>
+<span class="material-symbols-outlined text-slate-400">expand_more</span>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<div class="bg-white dark:bg-slate-800 p-4 rounded-xl shadow-sm border border-primary/5">
+<p class="text-xs font-medium text-slate-500 dark:text-slate-400 uppercase tracking-wider">Total de Posts</p>
+<div class="mt-2 flex items-baseline justify-between">
+<h3 class="text-2xl font-bold text-slate-900 dark:text-slate-100">12</h3>
+<span class="text-xs font-bold text-green-500">+2%</span>
+</div>
+</div>
+<div class="bg-white dark:bg-slate-800 p-4 rounded-xl shadow-sm border border-primary/5">
+<p class="text-xs font-medium text-slate-500 dark:text-slate-400 uppercase tracking-wider">Views</p>
+<div class="mt-2 flex items-baseline justify-between">
+<h3 class="text-2xl font-bold text-slate-900 dark:text-slate-100">45.2K</h3>
+<span class="text-xs font-bold text-green-500">+15%</span>
+</div>
+</div>
+<div class="bg-white dark:bg-slate-800 p-4 rounded-xl shadow-sm border border-primary/5">
+<p class="text-xs font-medium text-slate-500 dark:text-slate-400 uppercase tracking-wider">Likes</p>
+<div class="mt-2 flex items-baseline justify-between">
+<h3 class="text-2xl font-bold text-slate-900 dark:text-slate-100">3.8K</h3>
+<span class="text-xs font-bold text-red-500">-5%</span>
+</div>
+</div>
+<div class="bg-white dark:bg-slate-800 p-4 rounded-xl shadow-sm border border-primary/5">
+<p class="text-xs font-medium text-slate-500 dark:text-slate-400 uppercase tracking-wider">Engajamento</p>
+<div class="mt-2 flex items-baseline justify-between">
+<h3 class="text-2xl font-bold text-slate-900 dark:text-slate-100">8.4%</h3>
+<span class="text-xs font-bold text-green-500">+1.2%</span>
+</div>
+</div>
+</div>
+<div class="bg-white dark:bg-slate-800 p-4 rounded-xl shadow-sm border border-primary/5">
+<div class="flex items-center justify-between mb-4">
+<h3 class="font-bold text-slate-900 dark:text-slate-100">Views Performance</h3>
+<span class="text-xs text-slate-400">Jun 01 - Jun 07</span>
+</div>
+<div class="h-40 w-full flex items-end justify-between gap-2 px-2">
+<div class="bg-primary/20 w-full rounded-t-lg h-24 relative group">
+<div class="absolute -top-6 left-1/2 -translate-x-1/2 text-[10px] font-bold text-primary opacity-0 group-hover:opacity-100">4k</div>
+</div>
+<div class="bg-primary/40 w-full rounded-t-lg h-32 relative group">
+<div class="absolute -top-6 left-1/2 -translate-x-1/2 text-[10px] font-bold text-primary opacity-0 group-hover:opacity-100">6k</div>
+</div>
+<div class="bg-primary w-full rounded-t-lg h-40 relative group">
+<div class="absolute -top-6 left-1/2 -translate-x-1/2 text-[10px] font-bold text-primary opacity-0 group-hover:opacity-100">8k</div>
+</div>
+<div class="bg-primary/60 w-full rounded-t-lg h-28 relative group">
+<div class="absolute -top-6 left-1/2 -translate-x-1/2 text-[10px] font-bold text-primary opacity-0 group-hover:opacity-100">5k</div>
+</div>
+<div class="bg-primary/30 w-full rounded-t-lg h-20 relative group">
+<div class="absolute -top-6 left-1/2 -translate-x-1/2 text-[10px] font-bold text-primary opacity-0 group-hover:opacity-100">3k</div>
+</div>
+<div class="bg-primary/50 w-full rounded-t-lg h-36 relative group">
+<div class="absolute -top-6 left-1/2 -translate-x-1/2 text-[10px] font-bold text-primary opacity-0 group-hover:opacity-100">7k</div>
+</div>
+<div class="bg-primary/80 w-full rounded-t-lg h-30 relative group">
+<div class="absolute -top-6 left-1/2 -translate-x-1/2 text-[10px] font-bold text-primary opacity-0 group-hover:opacity-100">5.5k</div>
+</div>
+</div>
+<div class="flex justify-between mt-2 px-1">
+<span class="text-[10px] text-slate-400 uppercase">Seg</span>
+<span class="text-[10px] text-slate-400 uppercase">Ter</span>
+<span class="text-[10px] text-slate-400 uppercase">Qua</span>
+<span class="text-[10px] text-slate-400 uppercase">Qui</span>
+<span class="text-[10px] text-slate-400 uppercase">Sex</span>
+<span class="text-[10px] text-slate-400 uppercase">Sab</span>
+<span class="text-[10px] text-slate-400 uppercase">Dom</span>
+</div>
+</div>
+<section class="space-y-4">
+<div class="flex items-center justify-between">
+<h3 class="font-bold text-lg text-slate-900 dark:text-slate-100">Top Posts</h3>
+<button class="text-sm font-semibold text-primary">Ver todos</button>
+</div>
+<div class="space-y-3">
+<div class="flex items-center gap-4 bg-white dark:bg-slate-800 p-3 rounded-xl shadow-sm">
+<div class="h-16 w-16 shrink-0 bg-primary/10 rounded-lg overflow-hidden border border-slate-100 dark:border-slate-700">
+<img class="h-full w-full object-cover" data-alt="Social media post creative flat lay design" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAJj0sD3XOm_tgD4QFxxS01YPnTvzVZZr5KE3s07VTQMxKY6oGvOw6U7plz50BOoGuNX2_zjfhK5M7ZtnpOSAqKa2AOUn-cWcgkL3rDOVPwsHzsP2I1aUT860nek0fJ6x2LG7paDytp2uw36M-dX1c8XdSQi69UU5HR44QkkG1jKWjsW-DpmJCxR-iZjURMwBo8hUTyDTc55yOQa0wVVGDcxppOFqk3WcJE4pdpSGEHOW0QyFIi4LWcse6MLgcLCX0CY7osZFzotZse"/>
+</div>
+<div class="flex-1">
+<h4 class="text-sm font-bold text-slate-900 dark:text-slate-100 line-clamp-1">Dicas de Fotografia de Verão</h4>
+<div class="flex items-center gap-3 mt-1">
+<div class="flex items-center gap-1 text-[11px] text-slate-500">
+<span class="material-symbols-outlined text-[14px]">visibility</span>
+<span>12.4K</span>
+</div>
+<div class="flex items-center gap-1 text-[11px] text-slate-500">
+<span class="material-symbols-outlined text-[14px]">favorite</span>
+<span>1.2K</span>
+</div>
+<div class="flex items-center gap-1 text-[11px] text-slate-500">
+<span class="material-symbols-outlined text-[14px]">share</span>
+<span>450</span>
+</div>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-4 bg-white dark:bg-slate-800 p-3 rounded-xl shadow-sm">
+<div class="h-16 w-16 shrink-0 bg-primary/10 rounded-lg overflow-hidden border border-slate-100 dark:border-slate-700">
+<img class="h-full w-full object-cover" data-alt="Marketing data analytics chart on screen" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAdHbNQHi9YLGZw5E4v9liOKFnNin0qAzPt0SZBlJwYay1NcEJOZKYJOinZrPE7MhIOqiWycbGxuBlKEcjDzjZ9zgyNgePc56uCDfSVQY2_sWnOLIy7F8RfSkxyD2MP1Zd3eWsRX1O3I64XxO3Ut_c3lzk_KzV5Xx4nGZX1J3XUnws_SRydx6oFIsu-KzKucNE-SmCew4OEaNdSC3vIODkXoo8mZW01JPfdx8n8sbJQIp6lu1gUFrJsIUf9zS1N_ZWvndAVrBGn2jRa"/>
+</div>
+<div class="flex-1">
+<h4 class="text-sm font-bold text-slate-900 dark:text-slate-100 line-clamp-1">Como crescer no Instagram</h4>
+<div class="flex items-center gap-3 mt-1">
+<div class="flex items-center gap-1 text-[11px] text-slate-500">
+<span class="material-symbols-outlined text-[14px]">visibility</span>
+<span>10.1K</span>
+</div>
+<div class="flex items-center gap-1 text-[11px] text-slate-500">
+<span class="material-symbols-outlined text-[14px]">favorite</span>
+<span>980</span>
+</div>
+<div class="flex items-center gap-1 text-[11px] text-slate-500">
+<span class="material-symbols-outlined text-[14px]">share</span>
+<span>320</span>
+</div>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-4 bg-white dark:bg-slate-800 p-3 rounded-xl shadow-sm opacity-90">
+<div class="h-16 w-16 shrink-0 bg-primary/10 rounded-lg overflow-hidden border border-slate-100 dark:border-slate-700">
+<img class="h-full w-full object-cover" data-alt="Business collaboration workspace setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDqy1ktRlpzg7Ku-nUXGu-B0aVMDZ1wnjGpyYUTmPJj44ZziWDo0gnMIN0KdpKcRZDLpo9RixDlMsPbRztWfMvOTfbtdkfNaZPk9ILzdyMycvWFgqxAEKc7hS8PvWi3A8IJds-ILFcToaSjexQ3CNrGmuHUEL5wGZO6epaIDA9Y6350zRrjQAmIVzZb1Hb_F7vVnh_FJEssMfkJYiOPNggBD3c4ZKFhi390JcsaDaRtAsv-7ksM5tGVjXJEff6Gmf-2CXqepa4Nef1B"/>
+</div>
+<div class="flex-1">
+<h4 class="text-sm font-bold text-slate-900 dark:text-slate-100 line-clamp-1">Vlog: Um dia comigo na agência</h4>
+<div class="flex items-center gap-3 mt-1">
+<div class="flex items-center gap-1 text-[11px] text-slate-500">
+<span class="material-symbols-outlined text-[14px]">visibility</span>
+<span>8.5K</span>
+</div>
+<div class="flex items-center gap-1 text-[11px] text-slate-500">
+<span class="material-symbols-outlined text-[14px]">favorite</span>
+<span>812</span>
+</div>
+<div class="flex items-center gap-1 text-[11px] text-slate-500">
+<span class="material-symbols-outlined text-[14px]">share</span>
+<span>210</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<nav class="fixed bottom-0 left-1/2 -translate-x-1/2 w-full max-w-[390px] border-t border-slate-200 dark:border-slate-700 bg-white/80 dark:bg-slate-900/80 backdrop-blur-lg px-4 pb-6 pt-2 z-50">
+<div class="flex justify-between items-center">
+<a class="flex flex-col items-center gap-1 text-slate-400 hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined">home</span>
+<span class="text-[10px] font-medium">Home</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-primary" href="#">
+<span class="material-symbols-outlined">bar_chart</span>
+<span class="text-[10px] font-medium">Analytics</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-slate-400 hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined">add_box</span>
+<span class="text-[10px] font-medium">Post</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-slate-400 hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined">groups</span>
+<span class="text-[10px] font-medium">Publi</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-slate-400 hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined">person</span>
+<span class="text-[10px] font-medium">Perfil</span>
+</a>
+</div>
+</nav>
+</div>
+</body></html>

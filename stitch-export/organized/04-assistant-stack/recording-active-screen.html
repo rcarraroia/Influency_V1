@@ -1,0 +1,100 @@
+<html lang="pt-br"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#6400f0",
+                        "danger": "#FF3B30",
+                    },
+                    fontFamily: {
+                        "display": ["Plus Jakarta Sans", "sans-serif"]
+                    }
+                },
+            },
+        }
+    </script>
+<style type="text/tailwindcss">
+        @keyframes pulse-red {
+            0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(255, 59, 48, 0.7); }
+            70% { transform: scale(1.05); box-shadow: 0 0 0 10px rgba(255, 59, 48, 0); }
+            100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(255, 59, 48, 0); }
+        }
+        .rec-pulse {
+            animation: pulse-red 2s infinite;
+        }
+        .teleprompter-mask {
+            mask-image: linear-gradient(to bottom, transparent, black 15%, black 85%, transparent);
+        }
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #1a1a1a;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body>
+<div class="relative w-[390px] h-[844px] bg-black overflow-hidden shadow-2xl rounded-[3rem] border-[8px] border-slate-900">
+<div class="absolute inset-0 w-full h-full bg-cover bg-center" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDnp1TLM1O-oh4CaD4oNXuZ-mIt1TBjm0yG_V1UGr3hd2bDm1AjUBA1n9Udf9dQ-Rsq2b4qZO2ZBqgK5qNCfUEX6-dhgvnj1V4oJqNqPtQGZM_AgiwuakUQl_PrqiE605-6K6tj5bUUcoZT9MWRIvaja_uDBrtFnCNzU_RCgpmq-BsgaSXZxL4ugGM6uVdq_gWF30xA93tl2ou41kmD_Q4yRJT7Ji6M-UAy6bmE3S8Z7dF18T7xq25cZJFxZDKx-q964rtIj_WSwoIN');">
+<div class="absolute inset-0 bg-black/20"></div>
+</div>
+<div class="absolute top-12 left-0 w-full flex justify-center z-30">
+<div class="bg-black/60 backdrop-blur-md px-4 py-1 rounded-full border border-white/20 flex items-center gap-2">
+<div class="w-2 h-2 rounded-full bg-danger rec-pulse"></div>
+<span class="text-white font-mono text-lg font-bold">00:15</span>
+</div>
+</div>
+<div class="absolute top-24 left-0 w-full h-[320px] z-20 px-6 overflow-hidden teleprompter-mask">
+<div class="h-full flex flex-col items-center justify-start text-center">
+<div class="space-y-6 pt-12">
+<p class="text-white/40 text-2xl font-bold leading-tight">Olá! Hoje vou compartilhar 5 estratégias poderosas para alavancar o seu negócio no digital.</p>
+<p class="text-white text-3xl font-bold leading-tight">1. Marketing de Conteúdo: Crie conteúdo valioso que resolva as dores do seu cliente. Não tente apenas vender, tente educar.</p>
+<p class="text-white/40 text-2xl font-bold leading-tight">2. Redes Sociais: Esteja presente onde seu público está. Escolha as plataformas certas e mantenha uma frequência consistente.</p>
+</div>
+</div>
+</div>
+<div class="absolute bottom-0 left-0 w-full pb-12 pt-12 px-8 bg-gradient-to-t from-black/80 to-transparent z-30">
+<div class="flex items-center justify-between">
+<button class="w-14 h-14 rounded-full bg-white/10 backdrop-blur-md border border-white/20 flex items-center justify-center text-white hover:bg-white/20 transition-all">
+<span class="material-symbols-outlined text-[32px]">pause</span>
+</button>
+<div class="relative flex items-center justify-center">
+<div class="w-24 h-24 rounded-full border-4 border-white flex items-center justify-center">
+<button class="w-16 h-16 bg-danger rounded-lg rec-pulse shadow-lg flex items-center justify-center">
+<span class="material-symbols-outlined text-white text-[32px] font-bold">stop</span>
+</button>
+</div>
+</div>
+<button class="w-14 h-14 rounded-full bg-white/10 backdrop-blur-md border border-white/20 flex items-center justify-center text-white hover:bg-white/20 transition-all">
+<span class="material-symbols-outlined text-[32px]">settings</span>
+</button>
+</div>
+<div class="flex items-center justify-between mt-4 px-2">
+<span class="text-white/70 text-xs font-medium uppercase tracking-widest w-14 text-center">Pausar</span>
+<span class="text-white text-xs font-bold uppercase tracking-widest text-center">Gravando</span>
+<span class="text-white/70 text-xs font-medium uppercase tracking-widest w-14 text-center">Ajustes</span>
+</div>
+</div>
+<div class="absolute bottom-2 left-0 w-full flex justify-center z-40">
+<div class="w-32 h-1 bg-white/40 rounded-full"></div>
+</div>
+<div class="absolute top-0 left-1/2 -translate-x-1/2 w-[160px] h-[34px] bg-black rounded-b-[1.5rem] z-50"></div>
+</div>
+
+</body></html>

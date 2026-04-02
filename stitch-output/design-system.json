@@ -1,0 +1,78 @@
+{
+  "name": "Influency Design System",
+  "version": "2.0.0",
+  "viewport": {
+    "width": 390,
+    "height": 844,
+    "device": "iPhone 14"
+  },
+  "colors": {
+    "primary": "#6200EE",
+    "primaryLight": "#7F39FB",
+    "primaryDark": "#5300CC",
+    "secondary": "#03DAC6",
+    "secondaryLight": "#66FFF9",
+    "secondaryDark": "#00A896",
+    "success": "#00C853",
+    "error": "#B00020",
+    "warning": "#FF9800",
+    "background": "#FFFFFF",
+    "surface": "#F5F5F5",
+    "textPrimary": "#111827",
+    "textSecondary": "#6B7280",
+    "textDisabled": "#9CA3AF"
+  },
+  "typography": {
+    "fontFamily": "Roboto",
+    "weights": {
+      "regular": 400,
+      "medium": 500,
+      "semiBold": 600,
+      "bold": 700
+    },
+    "sizes": {
+      "xxl": "28px",
+      "xl": "24px",
+      "lg": "20px",
+      "base": "16px",
+      "sm": "14px",
+      "xs": "12px"
+    }
+  },
+  "spacing": {
+    "xxs": "4px",
+    "xs": "8px",
+    "sm": "12px",
+    "base": "16px",
+    "md": "20px",
+    "lg": "24px",
+    "xl": "32px",
+    "xxl": "40px"
+  },
+  "borderRadius": {
+    "sm": "4px",
+    "md": "8px",
+    "lg": "12px",
+    "xl": "16px",
+    "full": "9999px"
+  },
+  "components": {
+    "button": {
+      "minHeight": "44px",
+      "paddingVertical": "12px",
+      "paddingHorizontal": "20px",
+      "borderRadius": "8px"
+    },
+    "card": {
+      "borderRadius": "12px",
+      "padding": "16px",
+      "shadow": "0 2px 4px rgba(0,0,0,0.1)"
+    },
+    "input": {
+      "height": "44px",
+      "borderRadius": "8px",
+      "borderWidth": "1px",
+      "paddingHorizontal": "16px"
+    }
+  }
+}

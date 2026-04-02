@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Select Networks Screen</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#660ce4",
+                        "background-light": "#f7f5f8",
+                        "background-dark": "#171022",
+                    },
+                    fontFamily: {
+                        "display": ["Plus Jakarta Sans"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.5rem",
+                        "lg": "1rem",
+                        "xl": "1.5rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+        .ios-status-bar {
+            height: 44px;
+        }
+        .ios-home-indicator {
+            height: 34px;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark flex justify-center items-center min-h-screen">
+<!-- Mobile Container (390x844px) -->
+<div class="relative w-[390px] h-[844px] bg-white dark:bg-slate-900 shadow-2xl flex flex-col overflow-hidden rounded-xl border border-slate-200 dark:border-slate-800">
+<!-- Header Section -->
+<header class="bg-primary pt-12 pb-6 px-6 text-white shrink-0">
+<div class="flex items-center gap-4">
+<button class="flex items-center justify-center size-10 rounded-full hover:bg-white/10 transition-colors">
+<span class="material-symbols-outlined">arrow_back_ios_new</span>
+</button>
+<h1 class="text-xl font-bold tracking-tight">Selecionar Redes</h1>
+</div>
+<p class="mt-4 text-white/80 text-sm">Escolha onde você deseja publicar seu conteúdo hoje.</p>
+</header>
+<!-- Content Area -->
+<main class="flex-1 overflow-y-auto px-6 py-8 space-y-4">
+<!-- Instagram Card -->
+<div class="flex items-center justify-between p-4 bg-slate-50 dark:bg-slate-800/50 rounded-xl border border-slate-100 dark:border-slate-800">
+<div class="flex items-center gap-4">
+<div class="relative flex items-center justify-center">
+<input checked="" class="h-6 w-6 rounded-full border-2 border-primary text-primary focus:ring-primary focus:ring-offset-0 bg-transparent" type="checkbox"/>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-xl">camera</span>
+<span class="font-bold text-slate-900 dark:text-slate-100">Instagram</span>
+</div>
+<span class="text-xs text-slate-500 dark:text-slate-400">@usuario_instagram</span>
+</div>
+</div>
+<div class="flex flex-col items-end">
+<span class="text-xs font-semibold text-emerald-600 bg-emerald-50 dark:bg-emerald-900/20 px-2 py-1 rounded-full flex items-center gap-1">
+<span class="size-1.5 rounded-full bg-emerald-600"></span>
+                        Conectado
+                    </span>
+</div>
+</div>
+<!-- TikTok Card -->
+<div class="flex items-center justify-between p-4 bg-slate-50 dark:bg-slate-800/50 rounded-xl border border-slate-100 dark:border-slate-800">
+<div class="flex items-center gap-4">
+<div class="relative flex items-center justify-center">
+<input checked="" class="h-6 w-6 rounded-full border-2 border-primary text-primary focus:ring-primary focus:ring-offset-0 bg-transparent" type="checkbox"/>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-xl">movie</span>
+<span class="font-bold text-slate-900 dark:text-slate-100">TikTok</span>
+</div>
+<span class="text-xs text-slate-500 dark:text-slate-400">@usuario_tiktok</span>
+</div>
+</div>
+<div class="flex flex-col items-end">
+<span class="text-xs font-semibold text-emerald-600 bg-emerald-50 dark:bg-emerald-900/20 px-2 py-1 rounded-full flex items-center gap-1">
+<span class="size-1.5 rounded-full bg-emerald-600"></span>
+                        Conectado
+                    </span>
+</div>
+</div>
+<!-- Facebook Card (Unchecked) -->
+<div class="flex items-center justify-between p-4 bg-white dark:bg-slate-800/30 rounded-xl border border-slate-100 dark:border-slate-800 opacity-60">
+<div class="flex items-center gap-4">
+<div class="relative flex items-center justify-center">
+<input class="h-6 w-6 rounded-full border-2 border-slate-300 dark:border-slate-600 text-primary focus:ring-primary focus:ring-offset-0 bg-transparent" type="checkbox"/>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-slate-400 text-xl">social_leaderboard</span>
+<span class="font-bold text-slate-900 dark:text-slate-100">Facebook</span>
+</div>
+<span class="text-xs text-slate-400">Desconectado</span>
+</div>
+</div>
+<div class="flex flex-col items-end">
+<span class="text-xs font-semibold text-slate-400 bg-slate-100 dark:bg-slate-700/50 px-2 py-1 rounded-full">
+                        Não conectado
+                    </span>
+</div>
+</div>
+<!-- YouTube Card (Unchecked) -->
+<div class="flex items-center justify-between p-4 bg-white dark:bg-slate-800/30 rounded-xl border border-slate-100 dark:border-slate-800 opacity-60">
+<div class="flex items-center gap-4">
+<div class="relative flex items-center justify-center">
+<input class="h-6 w-6 rounded-full border-2 border-slate-300 dark:border-slate-600 text-primary focus:ring-primary focus:ring-offset-0 bg-transparent" type="checkbox"/>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-slate-400 text-xl">video_library</span>
+<span class="font-bold text-slate-900 dark:text-slate-100">YouTube</span>
+</div>
+<span class="text-xs text-slate-400">Desconectado</span>
+</div>
+</div>
+<div class="flex flex-col items-end">
+<span class="text-xs font-semibold text-slate-400 bg-slate-100 dark:bg-slate-700/50 px-2 py-1 rounded-full">
+                        Não conectado
+                    </span>
+</div>
+</div>
+<!-- Ad New Network (Dashed Card) -->
+<button class="w-full flex items-center justify-center gap-2 p-4 border-2 border-dashed border-primary/30 rounded-xl text-primary font-medium hover:bg-primary/5 transition-colors">
+<span class="material-symbols-outlined">add_circle</span>
+                Conectar Nova Rede
+            </button>
+</main>
+<!-- Footer Button -->
+<footer class="p-6 bg-white dark:bg-slate-900 border-t border-slate-100 dark:border-slate-800 shrink-0">
+<button class="w-full h-14 bg-primary text-white font-bold rounded-xl shadow-lg shadow-primary/30 hover:brightness-110 active:scale-[0.98] transition-all flex items-center justify-center gap-2">
+                Próximo
+                <span class="material-symbols-outlined">arrow_forward</span>
+</button>
+<div class="ios-home-indicator flex justify-center items-end pb-2">
+<div class="w-32 h-1 bg-slate-300 dark:bg-slate-700 rounded-full"></div>
+</div>
+</footer>
+</div>
+</body></html>

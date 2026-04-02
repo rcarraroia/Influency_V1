@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+
+<html class="light" lang="pt-br"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              colors: {
+                "primary": "#660ce4",
+                "background-light": "#f7f5f8",
+                "background-dark": "#171022",
+              },
+              fontFamily: {
+                "display": ["Plus Jakarta Sans"]
+              },
+              borderRadius: {"DEFAULT": "0.5rem", "lg": "1rem", "xl": "1.5rem", "full": "9999px"},
+            },
+          },
+        }
+    </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-slate-200 font-display">
+<!-- Mobile Container Emulator -->
+<div class="mx-auto my-8 h-[844px] w-[390px] overflow-hidden rounded-[3rem] border-[8px] border-slate-900 bg-background-light shadow-2xl relative">
+<!-- Background App Content (Simulated) -->
+<div class="absolute inset-0 z-0">
+<div class="h-full w-full bg-cover bg-center" data-alt="Cinematic video still of a person walking in nature" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCtfKHFcT97AY0-7jbku4Kv3YxCmJp6R1MN6bRhzUVq1aXumNI6direo1sTdKdxqVjnKxtx2T-grbudXkMo9NKGEsaxN5Xb7vkMgqXTJykNKFjmCzFhzUMH0ctNGkIAYI4t4oW7gALoPbbYRTZ9uc1q9-kPxAMfNDBGAH3QF5Qpza2sBxNqPl8SOaYrTVJJSkdCBfiZilZvsD_Ci2_RDsjmGK4xL8h1LLfabzauL2R4bGyJ3VLXsU65gEx2jigDIALHYZpjI9ZxsePm')"></div>
+<div class="absolute inset-0 bg-black/40"></div>
+</div>
+<!-- Bottom Sheet Overlay -->
+<div class="absolute inset-0 z-10 flex flex-col justify-end bg-black/60">
+<!-- Modal Card -->
+<div class="flex flex-col rounded-t-xl bg-background-light dark:bg-background-dark pb-8">
+<!-- BottomSheetHandle -->
+<button class="flex h-6 w-full items-center justify-center pt-2">
+<div class="h-1.5 w-12 rounded-full bg-primary/20"></div>
+</button>
+<div class="flex flex-col px-6">
+<!-- Title -->
+<h1 class="py-4 text-center text-lg font-bold text-slate-900 dark:text-slate-100">Personalizar Legendas</h1>
+<!-- Preview Area -->
+<div class="mb-6 overflow-hidden rounded-xl border border-primary/10 shadow-sm">
+<div class="relative flex h-32 items-center justify-center bg-slate-800 bg-cover bg-center" data-alt="Camera lens focusing on a creative scene" style="background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0) 100%), url('https://lh3.googleusercontent.com/aida-public/AB6AXuD95gfiLqyQ49mWDQXIkGtljsvy8tBcxllA5iU5d3RqklR2FkiieoxKhBNp11uwNoupDGycipVAlm2puGYcBDEQ-K5gLgZZD1BPxDqJP4_rFG_alaFU647zp_IpxCY3AJ3GArZdVOgWyqmQSeXXGN3MQ5W4rjCiPZMz5mS_2gHhyclaDj8vMcKxhWpX4LYnb-d39hoL_g4jxk5BHbEtVNIOov8IPARgIuEt5gzJFBV6IVoBEotcEDexDIonPTiAtjuZ2ditY3UPxX95')">
+<span class="rounded-md bg-black/70 px-3 py-1 text-center text-[18px] font-bold text-white shadow-lg">
+                                Exemplo de legenda
+                            </span>
+</div>
+<div class="bg-primary/5 py-2 text-center text-xs font-medium text-primary">
+                            Prévia em tempo real
+                        </div>
+</div>
+<!-- Controls Scrollable Area -->
+<div class="space-y-6 max-h-[420px] overflow-y-auto pr-1">
+<!-- Text Color Selection -->
+<div>
+<label class="mb-3 block text-sm font-bold text-slate-700 dark:text-slate-300">Cor do texto</label>
+<div class="flex gap-4">
+<label class="size-9 cursor-pointer rounded-full border-2 border-white ring-2 ring-primary ring-offset-2" style="background-color: #ffffff;">
+<input checked="" class="hidden" name="text-color" type="radio"/>
+</label>
+<label class="size-9 cursor-pointer rounded-full border-2 border-white ring-1 ring-slate-200" style="background-color: #FFEB3B;">
+<input class="hidden" name="text-color" type="radio"/>
+</label>
+<label class="size-9 cursor-pointer rounded-full border-2 border-white ring-1 ring-slate-200" style="background-color: #4CAF50;">
+<input class="hidden" name="text-color" type="radio"/>
+</label>
+<label class="size-9 cursor-pointer rounded-full border-2 border-white ring-1 ring-slate-200" style="background-color: #F44336;">
+<input class="hidden" name="text-color" type="radio"/>
+</label>
+<button class="flex size-9 items-center justify-center rounded-full border-2 border-dashed border-primary/30 text-primary">
+<span class="material-symbols-outlined text-sm">palette</span>
+</button>
+</div>
+</div>
+<!-- Background Opacity -->
+<div>
+<label class="mb-3 block text-sm font-bold text-slate-700 dark:text-slate-300">Fundo da legenda</label>
+<div class="flex items-center gap-4">
+<div class="flex h-10 flex-1 items-center justify-between rounded-lg bg-primary/10 px-4">
+<span class="text-sm font-medium text-primary">Preto (70%)</span>
+<span class="material-symbols-outlined text-primary">expand_more</span>
+</div>
+<div class="size-10 rounded-lg bg-black/70 border-2 border-white ring-1 ring-slate-200"></div>
+</div>
+</div>
+<!-- Font Size Slider -->
+<div>
+<div class="mb-3 flex justify-between">
+<label class="text-sm font-bold text-slate-700 dark:text-slate-300">Tamanho da fonte</label>
+<span class="text-sm font-bold text-primary">18px</span>
+</div>
+<input class="h-2 w-full cursor-pointer appearance-none rounded-lg bg-primary/20 accent-primary" max="32" min="12" type="range" value="18"/>
+</div>
+<!-- Style Dropdown -->
+<div>
+<label class="mb-3 block text-sm font-bold text-slate-700 dark:text-slate-300">Estilo</label>
+<div class="relative">
+<select class="w-full appearance-none rounded-lg border-none bg-slate-100 dark:bg-slate-800 p-4 text-sm font-medium text-slate-900 dark:text-slate-100 focus:ring-2 focus:ring-primary">
+<option value="moderno">Moderno</option>
+<option value="classico">Clássico</option>
+<option value="neon">Neon</option>
+</select>
+<div class="pointer-events-none absolute inset-y-0 right-4 flex items-center text-slate-500">
+<span class="material-symbols-outlined">expand_more</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Action Buttons -->
+<div class="mt-8 flex gap-4">
+<button class="flex-1 rounded-xl border border-primary/20 py-3.5 text-sm font-bold text-primary transition-colors active:bg-primary/5">
+                            Cancelar
+                        </button>
+<button class="flex-1 rounded-xl bg-primary py-3.5 text-sm font-bold text-white shadow-lg shadow-primary/30 active:scale-[0.98] transition-transform">
+                            Aplicar
+                        </button>
+</div>
+</div>
+</div>
+</div>
+<!-- iOS Indicator Bar -->
+<div class="absolute bottom-1.5 left-1/2 h-1 w-32 -translate-x-1/2 rounded-full bg-slate-800/20"></div>
+</div>
+</body></html>

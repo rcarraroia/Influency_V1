@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="pt-BR"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#660ce4",
+                        "background-light": "#f7f5f8",
+                        "background-dark": "#171022",
+                    },
+                    fontFamily: {
+                        "display": ["Plus Jakarta Sans", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.5rem",
+                        "lg": "1rem",
+                        "xl": "1.5rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: "Plus Jakarta Sans", sans-serif;
+        }
+        input[type='range']::-webkit-slider-runnable-track {
+            background: #483168;
+            height: 6px;
+            border-radius: 3px;
+        }
+        input[type='range']::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            height: 20px;
+            width: 20px;
+            background: #660ce4;
+            border-radius: 50%;
+            margin-top: -7px;
+            border: 2px solid #ffffff;
+        }
+        .custom-select-arrow {
+            background-image: url('data:image/svg+xml,%3csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%2724%27 height=%2724%27 fill=%27%23a990cb%27 viewBox=%270 0 256 256%27%3e%3cpath d=%27M181.66,170.34a8,8,0,0,1,0,11.32l-48,48a8,8,0,0,1-11.32,0l-48-48a8,8,0,0,1,11.32-11.32L128,212.69l42.34-42.35A8,8,0,0,1,181.66,170.34Zm-96-84.68L128,43.31l42.34,42.35a8,8,0,0,0,11.32-11.32l-48-48a8,8,0,0,0-11.32,0l-48,48A8,8,0,0,0,85.66,85.66Z%27%3e%3c/path%3e%3c/svg%3e');
+            background-repeat: no-repeat;
+            background-position: right 1rem center;
+            background-size: 1.5rem;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 min-h-screen flex justify-center">
+<div class="w-[390px] h-[844px] bg-background-light dark:bg-background-dark overflow-y-auto flex flex-col relative shadow-2xl border-x border-slate-200 dark:border-slate-800">
+<header class="sticky top-0 z-10 flex items-center bg-background-light dark:bg-background-dark p-4 pb-2 justify-between">
+<button class="text-slate-900 dark:text-slate-100 flex size-12 shrink-0 items-center justify-start">
+<span class="material-symbols-outlined">arrow_back</span>
+</button>
+<h2 class="text-slate-900 dark:text-slate-100 text-lg font-bold leading-tight tracking-[-0.015em] flex-1 text-center pr-12">Editar Vídeo</h2>
+</header>
+<main class="flex-1 flex flex-col">
+<div class="p-4">
+<div class="relative w-full aspect-video rounded-xl bg-slate-200 dark:bg-slate-800 overflow-hidden shadow-lg">
+<div class="w-full h-full bg-center bg-no-repeat bg-cover flex items-center justify-center" data-alt="Cinematic landscape video preview thumbnail" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAP39I8oFCPQo0TzqvLB-fEsbfhU2iVfqhjFMH_IR3Uo1HejkfaIbX-II92e-W4CSziq419LC2FWwxAQQ2i0urqd5-oTQhRl2XIBJrxbp_1owPphTCFJQP37SCFh8mP6STAp67ke_quXe-lo1yi6q_5WoqtNWIEg8Em-Sxt_rxjUXNRczBeoA3eg6EjhenKykSzigPtk3cSWf8FDjnBrpQgcvyUPWUX9WcsX5qB5oFFjlDln1fwPqJwMoaNuZyJJzAvy4y6OHfV56eL");'>
+<div class="bg-primary/90 text-white rounded-full p-3 shadow-lg">
+<span class="material-symbols-outlined fill-1">play_arrow</span>
+</div>
+</div>
+</div>
+</div>
+<div class="px-4 space-y-1">
+<label class="flex items-center justify-between py-3 cursor-pointer group">
+<p class="text-slate-900 dark:text-slate-100 text-base font-medium">Adicionar legendas</p>
+<input checked="" class="h-6 w-6 rounded border-primary/30 bg-transparent text-primary focus:ring-primary focus:ring-offset-background-dark rounded-md" type="checkbox"/>
+</label>
+<div class="h-px bg-slate-200 dark:bg-primary/10 mx-1"></div>
+<label class="flex items-center justify-between py-3 cursor-pointer group">
+<p class="text-slate-900 dark:text-slate-100 text-base font-medium">Adicionar música</p>
+<input checked="" class="h-6 w-6 rounded border-primary/30 bg-transparent text-primary focus:ring-primary focus:ring-offset-background-dark rounded-md" type="checkbox"/>
+</label>
+<div class="h-px bg-slate-200 dark:bg-primary/10 mx-1"></div>
+<label class="flex items-center justify-between py-3 cursor-pointer group">
+<p class="text-slate-900 dark:text-slate-100 text-base font-medium">Aplicar assets</p>
+<input checked="" class="h-6 w-6 rounded border-primary/30 bg-transparent text-primary focus:ring-primary focus:ring-offset-background-dark rounded-md" type="checkbox"/>
+</label>
+<div class="h-px bg-slate-200 dark:bg-primary/10 mx-1"></div>
+<label class="flex items-center justify-between py-3 cursor-pointer group">
+<p class="text-slate-900 dark:text-slate-100 text-base font-medium">Cortes automáticos</p>
+<input checked="" class="h-6 w-6 rounded border-primary/30 bg-transparent text-primary focus:ring-primary focus:ring-offset-background-dark rounded-md" type="checkbox"/>
+</label>
+</div>
+<div class="px-4 py-4 space-y-4">
+<div class="flex flex-col gap-2">
+<p class="text-slate-900 dark:text-slate-100 text-sm font-semibold uppercase tracking-wider">Estilo de legenda</p>
+<select class="custom-select-arrow appearance-none w-full rounded-xl text-slate-900 dark:text-slate-100 border border-slate-200 dark:border-primary/20 bg-white dark:bg-primary/10 px-4 h-14 focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all">
+<option selected="" value="moderno">Moderno</option>
+<option value="classico">Clássico</option>
+<option value="minimalista">Minimalista</option>
+</select>
+</div>
+<div class="flex flex-col gap-2">
+<p class="text-slate-900 dark:text-slate-100 text-sm font-semibold uppercase tracking-wider">Modo de corte</p>
+<select class="custom-select-arrow appearance-none w-full rounded-xl text-slate-900 dark:text-slate-100 border border-slate-200 dark:border-primary/20 bg-white dark:bg-primary/10 px-4 h-14 focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all">
+<option selected="" value="dinamico">Dinâmico</option>
+<option value="suave">Suave</option>
+<option value="cinematografico">Cinematográfico</option>
+</select>
+</div>
+<div class="flex flex-col gap-3 py-2">
+<div class="flex justify-between items-center">
+<p class="text-slate-900 dark:text-slate-100 text-sm font-semibold uppercase tracking-wider">Volume da música</p>
+<span class="text-primary font-bold text-sm">70%</span>
+</div>
+<input class="w-full h-2 bg-slate-200 dark:bg-primary/20 rounded-lg appearance-none cursor-pointer accent-primary" max="100" min="0" type="range" value="70"/>
+</div>
+</div>
+</main>
+<footer class="p-6 bg-background-light dark:bg-background-dark border-t border-slate-200 dark:border-primary/10">
+<button class="w-full bg-primary hover:bg-primary/90 text-white font-bold py-4 rounded-xl shadow-[0_8px_30px_rgb(102,12,228,0.3)] transition-all active:scale-[0.98]">
+                Processar Vídeo
+            </button>
+</footer>
+</div>
+</body></html>

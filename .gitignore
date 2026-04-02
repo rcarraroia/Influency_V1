@@ -1,0 +1,181 @@
+# ============================================
+# GITIGNORE - PROJETO INFLUENCY V1
+# Proteção de arquivos sensíveis e segurança mobile
+# ============================================
+
+# ============================================
+# CREDENCIAIS E SECRETS (CRÍTICO)
+# ============================================
+.env
+.env.local
+.env.*.local
+.env.production
+.env.staging
+.env.development
+
+# Chaves de API e tokens
+*.key
+*.pem
+*.p12
+*.pfx
+*.cer
+*.crt
+secrets.json
+credentials.json
+
+# ============================================
+# MOBILE - ANDROID (CRÍTICO)
+# ============================================
+# Keystores (NUNCA commitar!)
+*.jks
+*.keystore
+keystore.properties
+key.properties
+
+# Google Services (contém API keys)
+google-services.json
+GoogleService-Info.plist
+
+# Android local properties
+local.properties
+
+# ============================================
+# MOBILE - iOS (CRÍTICO)
+# ============================================
+# Provisioning profiles
+*.mobileprovision
+*.provisionprofile
+
+# Certificates
+*.p12
+*.cer
+
+# iOS build
+ios/Pods/
+ios/build/
+ios/.xcode.env.local
+
+# ============================================
+# EXPO & REACT NATIVE
+# ============================================
+.expo/
+.expo-shared/
+dist/
+web-build/
+
+# EAS (Expo Application Services)
+eas.json.local
+
+# ============================================
+# NODE & DEPENDENCIES
+# ============================================
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+.pnpm-debug.log*
+
+# Package manager locks (opcional - remover se quiser versionar)
+# package-lock.json
+# yarn.lock
+# pnpm-lock.yaml
+
+# ============================================
+# TYPESCRIPT
+# ============================================
+*.tsbuildinfo
+.tsbuildinfo
+
+# ============================================
+# TESTING & COVERAGE
+# ============================================
+coverage/
+.nyc_output/
+*.lcov
+
+# ============================================
+# LOGS
+# ============================================
+*.log
+logs/
+*.log.*
+
+# ============================================
+# CACHE & TEMP
+# ============================================
+.cache/
+.temp/
+.tmp/
+*.tmp
+*.temp
+
+# ============================================
+# IDE & EDITORS
+# ============================================
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# ============================================
+# BUILD OUTPUTS
+# ============================================
+build/
+dist/
+out/
+*.apk
+*.aab
+*.ipa
+
+# ============================================
+# SUPABASE (quando implementado)
+# ============================================
+# Migrations locais (se houver)
+supabase/.branches/
+supabase/.temp/
+
+# ============================================
+# BACKEND (quando implementado)
+# ============================================
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+env/
+ENV/
+
+# FastAPI
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# ============================================
+# DOCUMENTAÇÃO SENSÍVEL
+# ============================================
+# Documentos com credenciais ou dados sensíveis
+*-credentials.md
+*-secrets.md
+*-private.md
+
+# ============================================
+# OUTROS
+# ============================================
+# Backups
+*.bak
+*.backup
+*.old
+
+# Compressed files
+*.zip
+*.tar.gz
+*.rar
+
+# OS generated
+Thumbs.db
+Desktop.ini

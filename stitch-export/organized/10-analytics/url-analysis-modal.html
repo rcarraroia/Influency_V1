@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+
+<html class="light" lang="pt-br"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#660ce4",
+                        "background-light": "#f7f5f8",
+                        "background-dark": "#171022",
+                    },
+                    fontFamily: {
+                        "display": ["Plus Jakarta Sans", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.5rem", "lg": "1rem", "xl": "1.5rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        body { font-family: 'Plus Jakarta Sans', sans-serif; }
+        .ios-shadow { box-shadow: 0 -4px 20px rgba(0,0,0,0.1); }
+        .custom-select {
+            appearance: none;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%23660ce4'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M19 9l-7 7-7-7'%3E%3C/path%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: right 1rem center;
+            background-size: 1.5em;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-slate-900 flex items-center justify-center min-h-screen p-4">
+<!-- Mobile Screen Container (390x844 simulated) -->
+<div class="relative w-[390px] h-[844px] bg-background-light dark:bg-background-dark overflow-hidden rounded-[3rem] border-[8px] border-slate-800 shadow-2xl">
+<!-- Background Content (Simulated Influency App) -->
+<div class="absolute inset-0 p-6 opacity-40">
+<div class="flex items-center justify-between mb-8">
+<div class="w-10 h-10 rounded-full bg-primary/20"></div>
+<span class="material-symbols-outlined text-slate-400">notifications</span>
+</div>
+<div class="h-32 w-full bg-white dark:bg-slate-800 rounded-xl mb-4"></div>
+<div class="h-32 w-full bg-white dark:bg-slate-800 rounded-xl mb-4"></div>
+<div class="h-32 w-full bg-white dark:bg-slate-800 rounded-xl"></div>
+</div>
+<!-- Backdrop Overlay -->
+<div class="absolute inset-0 bg-slate-900/60 backdrop-blur-sm"></div>
+<!-- Bottom Sheet Modal -->
+<div class="absolute bottom-0 left-0 right-0 flex flex-col bg-white dark:bg-slate-900 rounded-t-[2.5rem] ios-shadow max-h-[90%] overflow-hidden">
+<!-- Bottom Sheet Handle -->
+<div class="flex h-6 w-full items-center justify-center pt-2">
+<div class="h-1.5 w-12 rounded-full bg-slate-200 dark:bg-slate-700"></div>
+</div>
+<!-- Modal Content -->
+<div class="flex flex-col p-6 pt-2">
+<!-- Header -->
+<div class="flex items-center gap-3 mb-6">
+<div class="flex size-10 shrink-0 items-center justify-center rounded-xl bg-primary/10 text-primary">
+<span class="material-symbols-outlined text-[24px]">link</span>
+</div>
+<h2 class="text-slate-900 dark:text-slate-100 text-xl font-bold tracking-tight">Analisar URL</h2>
+</div>
+<!-- Input: URL Link -->
+<div class="space-y-2 mb-5">
+<label class="text-slate-700 dark:text-slate-300 text-sm font-semibold ml-1">Link do vídeo
+<div class="relative">
+<input class="flex w-full rounded-xl text-slate-900 dark:text-slate-100 border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 h-14 px-4 focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all" placeholder="Cole o link do vídeo aqui" type="text" value="https://youtube.com/shorts/v8K29..."/>
+</div>
+</label></div>
+<!-- Input: Duration Dropdown -->
+<div class="space-y-2 mb-6">
+<label class="text-slate-700 dark:text-slate-300 text-sm font-semibold ml-1">Duração do roteiro
+<select class="custom-select flex w-full rounded-xl text-slate-900 dark:text-slate-100 border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 h-14 px-4 focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all">
+<option value="30">30 segundos</option>
+<option selected="" value="60">60 segundos</option>
+<option value="90">90 segundos</option>
+<option value="120">2 minutos</option>
+</select>
+</label></div>
+<!-- Supported Platforms -->
+<div class="mb-8">
+<h3 class="text-slate-900 dark:text-slate-100 text-sm font-semibold mb-4 ml-1">Plataformas suportadas</h3>
+<div class="flex gap-4">
+<div class="flex flex-col items-center gap-2">
+<div class="w-12 h-12 rounded-full bg-slate-100 dark:bg-slate-800 flex items-center justify-center border border-slate-200 dark:border-slate-700">
+<span class="material-symbols-outlined text-slate-600 dark:text-slate-400">play_circle</span>
+</div>
+<span class="text-[10px] font-medium text-slate-500 uppercase tracking-wider">YouTube</span>
+</div>
+<div class="flex flex-col items-center gap-2">
+<div class="w-12 h-12 rounded-full bg-slate-100 dark:bg-slate-800 flex items-center justify-center border border-slate-200 dark:border-slate-700">
+<span class="material-symbols-outlined text-slate-600 dark:text-slate-400">music_note</span>
+</div>
+<span class="text-[10px] font-medium text-slate-500 uppercase tracking-wider">TikTok</span>
+</div>
+<div class="flex flex-col items-center gap-2">
+<div class="w-12 h-12 rounded-full bg-slate-100 dark:bg-slate-800 flex items-center justify-center border border-slate-200 dark:border-slate-700">
+<span class="material-symbols-outlined text-slate-600 dark:text-slate-400">camera</span>
+</div>
+<span class="text-[10px] font-medium text-slate-500 uppercase tracking-wider">Instagram</span>
+</div>
+</div>
+</div>
+<!-- Progress Section -->
+<div class="mb-8 p-4 rounded-2xl bg-primary/5 border border-primary/10">
+<div class="flex justify-between items-center mb-2">
+<span class="text-primary text-sm font-bold">Transcrevendo...</span>
+<span class="text-primary text-xs font-bold">60%</span>
+</div>
+<div class="w-full h-2.5 bg-primary/20 rounded-full overflow-hidden">
+<div class="h-full bg-primary rounded-full w-[60%] transition-all duration-500"></div>
+</div>
+</div>
+<!-- Action Button -->
+<button class="w-full bg-primary hover:bg-primary/90 text-white font-bold py-4 rounded-xl shadow-lg shadow-primary/30 flex items-center justify-center gap-2 transition-transform active:scale-[0.98]">
+<span class="material-symbols-outlined">auto_awesome</span>
+                    Analisar e Gerar Roteiro
+                </button>
+<!-- Safe Area Spacer -->
+<div class="h-8"></div>
+</div>
+</div>
+<!-- iPhone Notch/Island -->
+<div class="absolute top-0 left-1/2 -translate-x-1/2 w-32 h-7 bg-slate-800 rounded-b-2xl z-50"></div>
+<!-- Status Bar -->
+<div class="absolute top-2 w-full px-8 flex justify-between text-[10px] font-bold text-slate-400 z-40">
+<span>9:41</span>
+<div class="flex gap-1">
+<span class="material-symbols-outlined text-[12px]">signal_cellular_alt</span>
+<span class="material-symbols-outlined text-[12px]">wifi</span>
+<span class="material-symbols-outlined text-[12px]">battery_full</span>
+</div>
+</div>
+<!-- Home Indicator -->
+<div class="absolute bottom-2 left-1/2 -translate-x-1/2 w-32 h-1.5 bg-slate-800/20 rounded-full z-50"></div>
+</div>
+</body></html>

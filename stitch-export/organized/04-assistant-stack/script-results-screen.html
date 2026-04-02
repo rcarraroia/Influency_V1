@@ -1,0 +1,163 @@
+<html lang="pt-br"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#6400f0",
+                        "background-light": "#f7f5f8",
+                        "background-dark": "#170f23",
+                    },
+                    fontFamily: {
+                        "display": ["Plus Jakarta Sans", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.5rem",
+                        "lg": "1rem",
+                        "xl": "1.5rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style type="text/tailwindcss">
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+        input[type="range"] {
+            -webkit-appearance: none;
+            width: 100%;
+            height: 6px;
+            background: #e2e8f0;
+            border-radius: 5px;
+            background-image: linear-gradient(#6400f0, #6400f0);
+            background-repeat: no-repeat;
+        }
+        input[type="range"]::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            height: 24px;
+            width: 24px;
+            border-radius: 50%;
+            background: #6400f0;
+            cursor: pointer;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+            border: 2px solid white;
+        }
+        .preview-scroll {
+            mask-image: linear-gradient(to bottom, transparent, black 20%, black 80%, transparent);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark flex justify-center items-center min-h-screen">
+<div class="relative w-[390px] h-[844px] bg-[#f5f5f5] dark:bg-background-dark shadow-2xl flex flex-col overflow-hidden border border-slate-200 dark:border-slate-800">
+<header class="h-[56px] w-full bg-primary flex items-center px-4 shrink-0 z-10">
+<button class="text-white flex items-center justify-center p-1">
+<span class="material-symbols-outlined text-[24px]">arrow_back</span>
+</button>
+<h1 class="flex-1 text-center text-white text-[20px] font-semibold tracking-tight pr-8">
+                Configurações
+            </h1>
+</header>
+<main class="flex-1 overflow-y-auto p-4 hide-scrollbar">
+<div class="bg-black rounded-xl p-6 mb-8 h-48 flex flex-col items-center justify-center relative overflow-hidden border border-slate-800 shadow-inner">
+<div class="absolute top-2 left-4 text-[10px] text-slate-500 font-medium uppercase tracking-widest">Preview</div>
+<div class="preview-scroll text-center px-4">
+<p class="text-white text-xl font-medium leading-snug opacity-90">
+                        Olá! Hoje vou compartilhar 5 estratégias poderosas para alavancar o seu negócio...
+                    </p>
+</div>
+<div class="absolute inset-x-0 top-1/2 -translate-y-1/2 border-y border-white/10 h-10 pointer-events-none"></div>
+</div>
+<div class="space-y-8">
+<div class="space-y-3">
+<label class="text-sm font-bold text-slate-700 dark:text-slate-300 flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-xl">swap_calls</span>
+                        Modo de Scroll
+                    </label>
+<div class="grid grid-cols-3 gap-2 bg-white dark:bg-slate-900 p-1.5 rounded-xl border border-slate-200 dark:border-slate-800">
+<button class="py-2.5 px-2 rounded-lg text-sm font-semibold bg-primary text-white shadow-sm">
+                            Auto
+                        </button>
+<button class="py-2.5 px-2 rounded-lg text-sm font-semibold text-slate-500 dark:text-slate-400 hover:bg-slate-50 dark:hover:bg-slate-800">
+                            Manual
+                        </button>
+<button class="py-2.5 px-2 rounded-lg text-sm font-semibold text-slate-500 dark:text-slate-400 hover:bg-slate-50 dark:hover:bg-slate-800">
+                            Voz
+                        </button>
+</div>
+</div>
+<div class="space-y-4">
+<div class="flex justify-between items-end">
+<label class="text-sm font-bold text-slate-700 dark:text-slate-300 flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-xl">speed</span>
+                            Velocidade
+                        </label>
+<span class="text-xs font-semibold text-primary bg-primary/10 px-2 py-1 rounded-full">45 wpm</span>
+</div>
+<div class="px-2">
+<input class="w-full accent-primary" max="100" min="1" style="background-size: 45% 100%;" type="range" value="45"/>
+</div>
+<div class="flex justify-between text-[10px] font-bold text-slate-400 uppercase tracking-tighter px-1">
+<span>Lento</span>
+<span>Rápido</span>
+</div>
+</div>
+<div class="space-y-4">
+<div class="flex justify-between items-end">
+<label class="text-sm font-bold text-slate-700 dark:text-slate-300 flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-xl">format_size</span>
+                            Tamanho da Fonte
+                        </label>
+<span class="text-xs font-semibold text-primary bg-primary/10 px-2 py-1 rounded-full">24px</span>
+</div>
+<div class="px-2">
+<input class="w-full accent-primary" max="48" min="12" style="background-size: 35% 100%;" type="range" value="24"/>
+</div>
+<div class="flex justify-between text-[10px] font-bold text-slate-400 uppercase tracking-tighter px-1">
+<span>Pequeno</span>
+<span>Grande</span>
+</div>
+</div>
+<div class="flex items-center justify-between bg-white dark:bg-slate-900 p-4 rounded-xl border border-slate-200 dark:border-slate-800">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary">face_2</span>
+<span class="text-sm font-semibold text-slate-700 dark:text-slate-300">Espelhar Texto</span>
+</div>
+<div class="w-12 h-6 bg-slate-200 dark:bg-slate-800 rounded-full relative">
+<div class="absolute left-1 top-1 w-4 h-4 bg-white rounded-full shadow-sm"></div>
+</div>
+</div>
+</div>
+<div class="h-24"></div>
+</main>
+<footer class="absolute bottom-0 left-0 w-full bg-white dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800 p-6 pb-8 shadow-[0_-8px_20px_rgba(0,0,0,0.05)]">
+<button class="w-full h-[54px] rounded-xl bg-primary text-white text-[16px] font-bold tracking-wide flex items-center justify-center shadow-xl shadow-primary/30 hover:brightness-110 active:scale-[0.98] transition-all">
+<span class="material-symbols-outlined text-[24px] mr-2">videocam</span>
+                Iniciar Gravação
+            </button>
+<div class="mt-6 flex justify-center">
+<div class="w-32 h-1.5 bg-slate-200 dark:bg-slate-800 rounded-full"></div>
+</div>
+</footer>
+</div>
+
+</body></html>

@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+
+<html class="light" lang="pt-br"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#660ce4",
+                        "background-light": "#f7f5f8",
+                        "background-dark": "#171022",
+                    },
+                    fontFamily: {
+                        "display": ["Inter"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<title>Saved Videos Grid</title>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display antialiased">
+<div class="relative mx-auto min-h-screen w-full max-w-[390px] bg-background-light dark:bg-background-dark flex flex-col shadow-2xl overflow-hidden">
+<header class="bg-primary px-4 pt-12 pb-4 flex items-center justify-between sticky top-0 z-20 shadow-md">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-white cursor-pointer">arrow_back_ios</span>
+<h1 class="text-white text-xl font-bold tracking-tight">Vídeos Salvos</h1>
+</div>
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-white cursor-pointer">search</span>
+<span class="material-symbols-outlined text-white cursor-pointer">more_vert</span>
+</div>
+</header>
+<div class="bg-primary px-4 pb-2">
+<div class="flex gap-6 overflow-x-auto no-scrollbar">
+<a class="flex flex-col items-center justify-center border-b-2 border-white pb-2" href="#">
+<p class="text-white text-sm font-bold">Todos</p>
+</a>
+<a class="flex flex-col items-center justify-center border-b-2 border-transparent pb-2 opacity-70" href="#">
+<p class="text-white text-sm font-bold">Recentes</p>
+</a>
+<a class="flex flex-col items-center justify-center border-b-2 border-transparent pb-2 opacity-70" href="#">
+<p class="text-white text-sm font-bold">Favoritos</p>
+</a>
+</div>
+</div>
+<main class="flex-1 overflow-y-auto p-4 pb-24">
+<div class="grid grid-cols-2 gap-4">
+<div class="bg-white dark:bg-slate-800 rounded-lg shadow-sm border border-slate-200 dark:border-slate-700 overflow-hidden flex flex-col">
+<div class="relative aspect-[3/4] bg-slate-200 dark:bg-slate-700 bg-cover bg-center" data-alt="Vertical video thumbnail of a person speaking" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuB3bsDxj-yQ9J_EOCyM_H_iCeU8zpkg8gq_7Jm5mzOW-RUReiQUNbRqjf5O1RVGkNAbQybkqSUAxgH6mxp964MFP7CSWjZuXhh53bk99dKihHWgiPeO-PdH6JyVerPaX-KarR6U2_9TyL5yqyGOaQzfWNkuOc6vxviXtRxc5bJKW9z2o8JhnuF8VcMcioN4ouCs11TL-nG9HFYtOGlNrWYA38sxJ-6RC_L37FsQ6PqRVARBvaODNaIdPWnSiJG019asWVuSAcKK5CPw');">
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+<div class="absolute bottom-2 left-2 bg-black/50 px-2 py-0.5 rounded text-[10px] text-white font-bold">1:30</div>
+</div>
+<div class="p-3 flex justify-between items-center">
+<div class="flex flex-col">
+<span class="text-slate-900 dark:text-slate-100 text-sm font-bold">15/10</span>
+<span class="text-slate-500 dark:text-slate-400 text-[10px]">Vídeo de Influência</span>
+</div>
+<button class="text-slate-400 dark:text-slate-500">
+<span class="material-symbols-outlined text-lg">more_vert</span>
+</button>
+</div>
+</div>
+<div class="bg-white dark:bg-slate-800 rounded-lg shadow-sm border border-slate-200 dark:border-slate-700 overflow-hidden flex flex-col">
+<div class="relative aspect-[3/4] bg-slate-200 dark:bg-slate-700 bg-cover bg-center" data-alt="Vertical video thumbnail showing a creative workspace" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDHBqGuAmYzVkUyGEAPAI0MESk3fmHudbWubKAxQbYgD05tqkmv5kJp4eGbXYysQW9-jnwtgoi5APnxedIa9t21ABCkrt3hjpKWjE5rGta527WcAOQWh-stbAqCq6tykF_oSc7yvoDwfeK5B3VYyiHNKu5mn0pepzhQPDAzXO6pm5yxufus_mzTNj21d1wC6XgywtbspClK5m8y8J3Y-9a6qu3b6IR6A-tBhc5DcyTLOJHVZCgRnuCDHlPQQlm7o_a2rrAXHVjEqXih');">
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+<div class="absolute bottom-2 left-2 bg-black/50 px-2 py-0.5 rounded text-[10px] text-white font-bold">1:30</div>
+</div>
+<div class="p-3 flex justify-between items-center">
+<div class="flex flex-col">
+<span class="text-slate-900 dark:text-slate-100 text-sm font-bold">15/10</span>
+<span class="text-slate-500 dark:text-slate-400 text-[10px]">Lifestyle Daily</span>
+</div>
+<button class="text-slate-400 dark:text-slate-500">
+<span class="material-symbols-outlined text-lg">more_vert</span>
+</button>
+</div>
+</div>
+<div class="bg-white dark:bg-slate-800 rounded-lg shadow-sm border border-slate-200 dark:border-slate-700 overflow-hidden flex flex-col">
+<div class="relative aspect-[3/4] bg-slate-200 dark:bg-slate-700 bg-cover bg-center" data-alt="Vertical video thumbnail of professional microphone" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuD_ZJqqk90y1RseM6afugtVPBPck-2XLYfS3z6GYFnUAtOc_VtW9sdKxbeSCIB0YM0dgie7EFRSzpPzv8xq_QAd3fM9GwdFasacGFLBxtxulU60raZn52o77WAqGxeYZnBIlyPqgvH4_ZkJzgrJF5aONbm4GGq7lGUZYfPWSYkDYw5estpzJldrZXh_CQ-EtPA9x093xqYpjTD0PI6RECQ_a-HJii4iMpCy3aMLUo2vAw6qGYFMVx5jxk2C1rtlWCj5qQTcOLmzARAM');">
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+<div class="absolute bottom-2 left-2 bg-black/50 px-2 py-0.5 rounded text-[10px] text-white font-bold">1:30</div>
+</div>
+<div class="p-3 flex justify-between items-center">
+<div class="flex flex-col">
+<span class="text-slate-900 dark:text-slate-100 text-sm font-bold">15/10</span>
+<span class="text-slate-500 dark:text-slate-400 text-[10px]">Podcast Snippet</span>
+</div>
+<button class="text-slate-400 dark:text-slate-500">
+<span class="material-symbols-outlined text-lg">more_vert</span>
+</button>
+</div>
+</div>
+<div class="bg-white dark:bg-slate-800 rounded-lg shadow-sm border border-slate-200 dark:border-slate-700 overflow-hidden flex flex-col">
+<div class="relative aspect-[3/4] bg-slate-200 dark:bg-slate-700 bg-cover bg-center" data-alt="Vertical video thumbnail of tech gadgets" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCgswRWkqBXWKe2oRpGsZa-9due0q-zTzCMPkG4ADlvYiaAtYejRf6bgLbZAlc-S726zJisP4MW1cDtB4KYS87PSMRarM-_rTkfyyNg1CAOgkT-MaFhM_yZNUEipP3Iu8zePmgG4MNP4m8wBwrxtd7BMRA0XkgAhiqqZsq_yMFm5GZcVhnDh2-t8IqWhT3A1HwRCdRrQM3d4nFZMylnvLzFN5pR3VOK3B7spbH_Ve69tEr-s2g1UeyRiuvWfKNt4p-8eb8W-vMPtcSe');">
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+<div class="absolute bottom-2 left-2 bg-black/50 px-2 py-0.5 rounded text-[10px] text-white font-bold">1:30</div>
+</div>
+<div class="p-3 flex justify-between items-center">
+<div class="flex flex-col">
+<span class="text-slate-900 dark:text-slate-100 text-sm font-bold">15/10</span>
+<span class="text-slate-500 dark:text-slate-400 text-[10px]">Tech Review</span>
+</div>
+<button class="text-slate-400 dark:text-slate-500">
+<span class="material-symbols-outlined text-lg">more_vert</span>
+</button>
+</div>
+</div>
+<div class="bg-white dark:bg-slate-800 rounded-lg shadow-sm border border-slate-200 dark:border-slate-700 overflow-hidden flex flex-col opacity-80">
+<div class="relative aspect-[3/4] bg-slate-200 dark:bg-slate-700 bg-cover bg-center" data-alt="Vertical video thumbnail of outdoor photography" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDbrrlQUbAA-JpzX9mwHvjgA3lJujuiENwXcr_5v34eghWuMZ20G5IQcN8Do0zk_j0V6fZ0HMPckdv6t7N81Lyba_0d4eKFj3oggq6UHmeLo_iT7FLh2R5w_u6kWloXfZG5rIPTkq3ac3DezmxWDoiGAQFgrlcHtd-czI0b8ZFS29wRJYCVd3Q3wSESfDZmAN2RbYFGdAQrvea3EIMwoxnChYiWVdhph6zuxw_3jwr-SNY7_wyfgLkyWzuwZcjAvdG_5YCWffjxZvvA');">
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+<div class="absolute bottom-2 left-2 bg-black/50 px-2 py-0.5 rounded text-[10px] text-white font-bold">1:30</div>
+</div>
+<div class="p-3 flex justify-between items-center">
+<div class="flex flex-col">
+<span class="text-slate-900 dark:text-slate-100 text-sm font-bold">14/10</span>
+<span class="text-slate-500 dark:text-slate-400 text-[10px]">Outdoor Vlogs</span>
+</div>
+<button class="text-slate-400 dark:text-slate-500">
+<span class="material-symbols-outlined text-lg">more_vert</span>
+</button>
+</div>
+</div>
+<div class="bg-white dark:bg-slate-800 rounded-lg shadow-sm border border-slate-200 dark:border-slate-700 overflow-hidden flex flex-col opacity-80">
+<div class="relative aspect-[3/4] bg-slate-200 dark:bg-slate-700 bg-cover bg-center" data-alt="Vertical video thumbnail of a group of people collaborating" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuByI7o4pFqoIeUodTIpMkkhUic-wDyLGD3QdFzno2HOU-Re_9hWHeB8JMIInrMPTkOJZ_lBtq9Pz97OsbpN3rf0X0Neb-GmTv62GZZFaoy5QKE1mn-5YZTHNdb8PeWDfVLqGN44y6HxbTiiCzsTP_5yueWKi7njqemW1eDRZCED-fR7gQRfjiAzqWZSoq37CjYZ9-BTI19DY7n-yhWlVQFWKXC94bHQR54STrA7KvHNctSqOLsYMTMI1fCaylFIWNRBpFyvMSo26BiI');">
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+<div class="absolute bottom-2 left-2 bg-black/50 px-2 py-0.5 rounded text-[10px] text-white font-bold">1:30</div>
+</div>
+<div class="p-3 flex justify-between items-center">
+<div class="flex flex-col">
+<span class="text-slate-900 dark:text-slate-100 text-sm font-bold">14/10</span>
+<span class="text-slate-500 dark:text-slate-400 text-[10px]">Workplace Shorts</span>
+</div>
+<button class="text-slate-400 dark:text-slate-500">
+<span class="material-symbols-outlined text-lg">more_vert</span>
+</button>
+</div>
+</div>
+</div>
+</main>
+<button class="absolute bottom-24 right-6 bg-primary size-14 rounded-full flex items-center justify-center text-white shadow-lg shadow-primary/40 active:scale-95 transition-transform z-30">
+<span class="material-symbols-outlined text-3xl">add</span>
+</button>
+<nav class="absolute bottom-0 left-0 right-0 bg-white dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800 flex justify-around items-center pt-2 pb-8 px-4 z-20">
+<a class="flex flex-col items-center gap-1 text-slate-400 dark:text-slate-500" href="#">
+<span class="material-symbols-outlined">home</span>
+<span class="text-[10px] font-medium">Home</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-primary" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">video_library</span>
+<span class="text-[10px] font-bold">Library</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-slate-400 dark:text-slate-500" href="#">
+<span class="material-symbols-outlined">bar_chart</span>
+<span class="text-[10px] font-medium">Analytics</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-slate-400 dark:text-slate-500" href="#">
+<span class="material-symbols-outlined">person</span>
+<span class="text-[10px] font-medium">Profile</span>
+</a>
+</nav>
+<div class="absolute bottom-8 left-1/2 -translate-x-1/2 w-32 h-1 bg-slate-300 dark:bg-slate-700 rounded-full z-40"></div>
+</div>
+</body></html>

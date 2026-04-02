@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#6400f0",
+                        "background-light": "#f7f5f8",
+                        "background-dark": "#170f23",
+                    },
+                    fontFamily: {
+                        "display": ["Plus Jakarta Sans", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.5rem", "lg": "1rem", "xl": "1.5rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        @keyframes spin {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+        .loading-spinner {
+            border: 4px solid rgba(100, 0, 240, 0.1);
+            border-left-color: #6400f0;
+            border-radius: 50%;
+            width: 80px;
+            height: 80px;
+            animation: spin 1s linear infinite;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 flex items-center justify-center min-h-screen">
+<div class="relative flex h-[844px] w-[390px] flex-col bg-white dark:bg-background-dark overflow-hidden shadow-2xl border border-slate-200 dark:border-slate-800">
+<div class="flex items-center p-4 justify-between">
+<div class="text-slate-900 dark:text-slate-100 flex size-12 shrink-0 items-center justify-center">
+<span class="material-symbols-outlined">close</span>
+</div>
+<h2 class="text-slate-900 dark:text-slate-100 text-lg font-bold leading-tight tracking-[-0.015em] flex-1 text-center pr-12">Influency</h2>
+</div>
+<div class="flex flex-col items-center justify-center flex-1 px-6">
+<div class="loading-spinner mb-12"></div>
+<div class="w-[280px] space-y-4 text-center">
+<h1 class="text-primary text-[32px] font-bold leading-tight">67%</h1>
+<div class="w-full h-2 rounded-full bg-slate-200 dark:bg-slate-800 overflow-hidden">
+<div class="h-full bg-primary rounded-full" style="width: 67%;"></div>
+</div>
+<p class="text-slate-600 dark:text-slate-400 text-lg font-medium">Gerando roteiro viral...</p>
+</div>
+</div>
+<div class="p-6 pb-12">
+<div class="bg-primary/10 dark:bg-primary/20 rounded-xl p-4 flex gap-4 items-start">
+<div class="bg-primary/20 dark:bg-primary/30 p-2 rounded-lg shrink-0">
+<span class="material-symbols-outlined text-primary">lightbulb</span>
+</div>
+<div class="flex flex-col gap-1">
+<p class="text-primary text-sm font-bold uppercase tracking-wider">Dica Pro</p>
+<p class="text-slate-700 dark:text-slate-300 text-sm leading-relaxed">
+                        Estamos analisando tendências e criando um roteiro otimizado para engajamento.
+                    </p>
+</div>
+</div>
+</div>
+<div class="absolute top-0 w-full h-11 flex justify-between px-6 pt-3 pointer-events-none">
+<div class="text-sm font-bold">9:41</div>
+<div class="flex gap-1.5 items-center">
+<span class="material-symbols-outlined text-[14px]">signal_cellular_4_bar</span>
+<span class="material-symbols-outlined text-[14px]">wifi</span>
+<span class="material-symbols-outlined text-[14px]">battery_full</span>
+</div>
+</div>
+</div>
+</body></html>

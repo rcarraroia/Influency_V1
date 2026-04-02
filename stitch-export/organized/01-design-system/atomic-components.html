@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#6400f0",
+                        "secondary": "#03DAC6",
+                        "background-light": "#f7f5f8",
+                        "background-dark": "#170f23",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<title>Atomic Component Library</title>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 antialiased">
+<!-- Main Container (Mobile Viewport 390x844 simulated) -->
+<div class="relative flex h-auto min-h-screen w-full max-w-[390px] mx-auto flex-col bg-white dark:bg-slate-900 shadow-2xl overflow-x-hidden border-x border-slate-200 dark:border-slate-800">
+<!-- Header -->
+<div class="sticky top-0 z-50 flex items-center bg-white/80 dark:bg-slate-900/80 backdrop-blur-md px-4 py-4 border-b border-slate-100 dark:border-slate-800 justify-between">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary">layers</span>
+<h1 class="text-lg font-bold leading-tight tracking-tight">Atomic Library</h1>
+</div>
+<span class="material-symbols-outlined text-slate-500">more_vert</span>
+</div>
+<!-- Scrollable Content -->
+<div class="flex-1 overflow-y-auto pb-24">
+<!-- SECTION 1: BUTTONS -->
+<section class="px-4 pt-6">
+<h3 class="text-xs font-bold uppercase tracking-widest text-slate-400 mb-4">Buttons</h3>
+<div class="flex flex-col gap-3">
+<!-- Primary -->
+<button class="flex h-[44px] w-full items-center justify-center rounded-lg bg-primary text-white text-sm font-semibold transition-opacity active:opacity-80">
+                        Entrar
+                    </button>
+<!-- Secondary -->
+<button class="flex h-[44px] w-full items-center justify-center rounded-lg bg-secondary text-white text-sm font-semibold transition-opacity active:opacity-80">
+                        Cancelar
+                    </button>
+<!-- Outline -->
+<button class="flex h-[44px] w-full items-center justify-center rounded-lg border-[1.5px] border-primary bg-transparent text-primary text-sm font-semibold">
+                        Editar
+                    </button>
+<!-- Text -->
+<button class="flex h-[44px] w-full items-center justify-center rounded-lg bg-transparent text-primary text-sm font-semibold">
+                        Pular
+                    </button>
+</div>
+</section>
+<!-- SECTION 2: CARDS -->
+<section class="px-4 pt-8">
+<h3 class="text-xs font-bold uppercase tracking-widest text-slate-400 mb-4">Cards</h3>
+<div class="flex flex-col gap-4">
+<!-- Elevated -->
+<div class="rounded-xl bg-white dark:bg-slate-800 p-4 shadow-lg shadow-primary/5 border border-slate-50 dark:border-slate-700">
+<h4 class="font-bold text-slate-900 dark:text-white mb-1">Título do Card</h4>
+<p class="text-sm text-slate-500 dark:text-slate-400">Este é um card elevado com sombra suave e bordas arredondadas.</p>
+</div>
+<!-- Outlined -->
+<div class="rounded-xl bg-white dark:bg-slate-800 p-4 border border-slate-200 dark:border-slate-700">
+<div class="flex items-center gap-3 mb-2">
+<div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center">
+<span class="material-symbols-outlined text-primary text-xl">info</span>
+</div>
+<span class="font-semibold text-sm">Informação Técnica</span>
+</div>
+<p class="text-sm text-slate-500 dark:text-slate-400">Card com borda definida para hierarquia secundária.</p>
+</div>
+<!-- Flat -->
+<div class="rounded-xl bg-slate-100 dark:bg-slate-800/50 p-4 border-none">
+<p class="text-sm text-slate-600 dark:text-slate-400">Card flat usado para agrupamento de conteúdos menos importantes ou seções de fundo.</p>
+</div>
+</div>
+</section>
+<!-- SECTION 3: INPUTS -->
+<section class="px-4 pt-8">
+<h3 class="text-xs font-bold uppercase tracking-widest text-slate-400 mb-4">Inputs</h3>
+<div class="flex flex-col gap-4">
+<div class="flex flex-col gap-1.5">
+<label class="text-xs font-medium text-slate-500 ml-1">E-mail</label>
+<input class="h-11 w-full rounded-lg border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 px-4 text-sm focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all" placeholder="Digite seu email" type="email"/>
+</div>
+<div class="flex flex-col gap-1.5">
+<label class="text-xs font-medium text-slate-500 ml-1">Senha</label>
+<div class="relative">
+<input class="h-11 w-full rounded-lg border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 px-4 text-sm focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all" placeholder="Digite sua senha" type="password" value="password123"/>
+<span class="material-symbols-outlined absolute right-3 top-2.5 text-slate-400 text-xl">visibility_off</span>
+</div>
+</div>
+<div class="flex flex-col gap-1.5">
+<label class="text-xs font-medium text-slate-500 ml-1">Mensagem</label>
+<textarea class="h-[100px] w-full rounded-lg border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 p-4 text-sm focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all resize-none" placeholder="Escreva aqui..."></textarea>
+</div>
+</div>
+</section>
+<!-- SECTION 4: SMALL COMPONENTS -->
+<section class="px-4 pt-8">
+<h3 class="text-xs font-bold uppercase tracking-widest text-slate-400 mb-4">Small Components</h3>
+<div class="grid grid-cols-2 gap-4 items-end">
+<div class="flex flex-col gap-4">
+<div class="flex items-center gap-2">
+<span class="inline-flex items-center rounded-full bg-primary px-3 py-1 text-[10px] font-bold uppercase text-white tracking-wider">Novo</span>
+<span class="text-xs text-slate-400">Badge</span>
+</div>
+<div class="flex items-center gap-2">
+<div class="inline-flex items-center gap-1.5 rounded-full bg-slate-200 dark:bg-slate-700 px-3 py-1.5 text-xs font-medium text-slate-700 dark:text-slate-200">
+<span class="material-symbols-outlined text-sm">sell</span>
+                                Tag
+                            </div>
+<span class="text-xs text-slate-400">Chip</span>
+</div>
+</div>
+<div class="flex flex-col gap-4 items-center">
+<div class="relative flex items-center justify-center">
+<!-- Spinner Simulation -->
+<div class="h-8 w-8 rounded-full border-4 border-primary/20 border-t-primary"></div>
+<span class="text-[10px] text-slate-400 mt-12 absolute">Loading</span>
+</div>
+</div>
+</div>
+<div class="mt-8">
+<div class="flex justify-between items-center mb-2">
+<span class="text-xs font-medium text-slate-500">Progresso do Perfil</span>
+<span class="text-xs font-bold text-primary">60%</span>
+</div>
+<div class="h-2 w-full overflow-hidden rounded-full bg-slate-100 dark:bg-slate-800">
+<div class="h-full w-[60%] rounded-full bg-primary"></div>
+</div>
+</div>
+</section>
+</div>
+<!-- Bottom Navigation Bar -->
+<div class="absolute bottom-0 left-0 right-0 flex border-t border-slate-100 dark:border-slate-800 bg-white/90 dark:bg-slate-900/90 backdrop-blur-md px-4 pb-6 pt-2">
+<a class="flex flex-1 flex-col items-center justify-center gap-1 text-primary" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">widgets</span>
+<p class="text-[10px] font-bold">Components</p>
+</a>
+<a class="flex flex-1 flex-col items-center justify-center gap-1 text-slate-400" href="#">
+<span class="material-symbols-outlined">palette</span>
+<p class="text-[10px] font-medium">Styles</p>
+</a>
+<a class="flex flex-1 flex-col items-center justify-center gap-1 text-slate-400" href="#">
+<span class="material-symbols-outlined">description</span>
+<p class="text-[10px] font-medium">Docs</p>
+</a>
+<a class="flex flex-1 flex-col items-center justify-center gap-1 text-slate-400" href="#">
+<span class="material-symbols-outlined">settings</span>
+<p class="text-[10px] font-medium">Config</p>
+</a>
+</div>
+</div>
+</body></html>

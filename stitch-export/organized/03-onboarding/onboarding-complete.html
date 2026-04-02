@@ -1,0 +1,87 @@
+<html lang="pt-BR"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#7800f0",
+            "background-light": "#f7f5f8",
+            "background-dark": "#190f23",
+          },
+          fontFamily: {
+            "display": ["Plus Jakarta Sans", "sans-serif"]
+          },
+          borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+        },
+      },
+    }
+  </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 antialiased">
+<div class="relative flex min-h-screen w-full flex-col overflow-x-hidden max-w-[390px] mx-auto bg-white dark:bg-background-dark shadow-2xl">
+<div class="flex items-center p-4 justify-between">
+<div class="text-slate-900 dark:text-slate-100 flex size-12 shrink-0 items-center justify-start">
+<span class="material-symbols-outlined text-2xl">close</span>
+</div>
+<h2 class="text-slate-900 dark:text-slate-100 text-lg font-bold leading-tight tracking-tight flex-1 text-center pr-12">Concluído</h2>
+</div>
+<div class="flex flex-col items-center justify-center flex-grow px-6 pb-24 pt-8">
+<div class="flex items-center justify-center mb-8">
+<div class="relative flex items-center justify-center w-[120px] h-[120px] rounded-full bg-primary/10">
+<div class="flex items-center justify-center w-[100px] h-[100px] bg-primary rounded-full shadow-lg shadow-primary/30">
+<span class="material-symbols-outlined text-white text-5xl font-bold">check</span>
+</div>
+<div class="absolute -top-2 -right-2 w-6 h-6 bg-primary/20 rounded-full"></div>
+<div class="absolute -bottom-1 -left-1 w-4 h-4 bg-primary/30 rounded-full"></div>
+</div>
+</div>
+<h2 class="text-slate-900 dark:text-slate-100 text-[28px] font-bold leading-tight text-center mb-3">Tudo pronto!</h2>
+<p class="text-slate-500 dark:text-slate-400 text-base font-normal leading-relaxed text-center mb-10">
+        Seu Business DNA está configurado e você está pronta para criar conteúdo viral
+      </p>
+<div class="w-full bg-primary/5 dark:bg-primary/10 rounded-xl p-6 border border-primary/10">
+<p class="text-primary font-bold text-sm uppercase tracking-wider mb-4">Resumo da configuração</p>
+<div class="space-y-4">
+<div class="flex items-center gap-3">
+<div class="flex items-center justify-center w-6 h-6 rounded-full bg-primary text-white">
+<span class="material-symbols-outlined text-sm">check</span>
+</div>
+<span class="text-slate-700 dark:text-slate-200 font-medium text-base">Perfil configurado</span>
+</div>
+<div class="flex items-center gap-3">
+<div class="flex items-center justify-center w-6 h-6 rounded-full bg-primary text-white">
+<span class="material-symbols-outlined text-sm">check</span>
+</div>
+<span class="text-slate-700 dark:text-slate-200 font-medium text-base">Redes conectadas</span>
+</div>
+<div class="flex items-center gap-3">
+<div class="flex items-center justify-center w-6 h-6 rounded-full bg-primary text-white">
+<span class="material-symbols-outlined text-sm">check</span>
+</div>
+<span class="text-slate-700 dark:text-slate-200 font-medium text-base">Business DNA definido</span>
+</div>
+</div>
+</div>
+<div class="mt-12 w-full">
+<div class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm" data-alt="Abstract colorful light patterns representing creative content flow" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBTakaKnNYwjJ_mLodb8BZJ1m9IBxEob_iOp2-koFTPCfQd3rMJaeVBnNBI6_vGas3x8DwoeUKYD24h8-47R1zRaYjuXE6ZTuKqDNmh02l2Q_lssarn7tzXsKOMwpLIFqqkBpIgkx65ukXNZ5BpWiPfLI7xkerkBB1C5MNP1YPgw_hSgyN9XGEa7nHmyxQqX0Cbe7yF4jOYAQramYsh2BK0mtV7aFM0-tO26ovO7Sl-XYSIZZugvtjXUHIP2sB2SqO1ElcXE0M_DWFu");'></div>
+</div>
+</div>
+<div class="fixed bottom-0 left-0 right-0 max-w-[390px] mx-auto px-6 pb-12 pt-4 bg-white/80 dark:bg-background-dark/80 backdrop-blur-md">
+<button class="w-full bg-primary hover:bg-primary/90 text-white font-bold h-11 px-4 rounded-lg flex items-center justify-center transition-all shadow-lg shadow-primary/20">
+        Criar meu primeiro roteiro
+      </button>
+</div>
+</div>
+</body></html>

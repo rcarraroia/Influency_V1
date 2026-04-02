@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+
+<html class="light" lang="pt-br"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Scheduled Posts Screen</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Roboto:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#660ce4",
+                        "background-light": "#f5f5f5",
+                        "background-dark": "#171022",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "Roboto", "sans-serif"],
+                        "sans": ["Roboto", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.5rem", "lg": "1rem", "xl": "1.5rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Roboto', sans-serif;
+        }
+        .ios-status-bar {
+            height: 44px;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark flex justify-center items-center min-h-screen">
+<!-- Mobile Container (390x844px) -->
+<div class="relative w-[390px] h-[844px] bg-background-light dark:bg-background-dark shadow-2xl overflow-hidden flex flex-col rounded-[3rem] border-[8px] border-slate-900">
+<!-- Header Section -->
+<header class="bg-primary pt-12 pb-6 px-6 text-white shrink-0">
+<div class="flex items-center justify-between mb-4">
+<span class="material-symbols-outlined cursor-pointer">arrow_back_ios</span>
+<h1 class="text-xl font-bold font-display">Posts Agendados</h1>
+<span class="material-symbols-outlined cursor-pointer">more_horiz</span>
+</div>
+<!-- Tabs Navigation -->
+<div class="flex gap-6 mt-4">
+<a class="pb-1 border-b-2 border-white font-medium text-sm" href="#">Agendados</a>
+<a class="pb-1 border-b-2 border-transparent text-white/70 text-sm" href="#">Publicados</a>
+<a class="pb-1 border-b-2 border-transparent text-white/70 text-sm" href="#">Rascunhos</a>
+</div>
+</header>
+<!-- Scrollable Content -->
+<main class="flex-1 overflow-y-auto px-4 py-4 space-y-4">
+<!-- Post Card 1 -->
+<div class="bg-white dark:bg-slate-800 rounded-xl p-4 shadow-sm border border-slate-200 dark:border-slate-700 flex flex-col gap-3">
+<div class="flex gap-4">
+<div class="w-20 h-20 rounded-lg bg-cover bg-center shrink-0" data-alt="Social media content creator setup with neon lights" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCbGFL5Drl0r1DfvHQj8sW8l428JGj8xzdrANYTrB5cNlAS1A_1AMPbo7eeil2O-8ZWDBmqo9yPbFsn-GzZZrIjsm6E3CfYkCxFeElg0HAvnDbcDHTEFTCFd5a3uj_Aeqp3JXMNiinCL7_O0KDIMKcL5d_5_CFseXfRRJbkg22Hyq6J8eK69TcBXBCm_07pavIqoU7tXtgwvD9BJlj6PsMgCFHPG4o3-fRjNlDt7rQMYYiNc_MdTFG2DF7hMmjiadmm-oJ0NPh0Yc5p')"></div>
+<div class="flex flex-col justify-between flex-1">
+<div>
+<p class="text-slate-900 dark:text-slate-100 text-sm font-medium line-clamp-2 leading-snug">
+                                Preparando o novo setup para as lives de amanhã! Não percam as novidades...
+                            </p>
+<p class="text-primary text-xs mt-1 font-semibold uppercase tracking-wider">25 Out, 18:30</p>
+</div>
+<div class="flex gap-2 mt-2">
+<span class="material-symbols-outlined text-slate-400 text-lg">photo_camera</span>
+<span class="material-symbols-outlined text-slate-400 text-lg">movie</span>
+</div>
+</div>
+</div>
+<div class="flex items-center justify-between pt-2 border-t border-slate-100 dark:border-slate-700">
+<div class="flex -space-x-2">
+<div class="w-6 h-6 rounded-full bg-pink-500 flex items-center justify-center border-2 border-white dark:border-slate-800">
+<img alt="Instagram" class="w-3 h-3 invert" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAMzZWb1-tvrshvG1ps9pnWy2SByTw-mHVLt-fbqkezPcs_5AahWI584Ejjbh8hamhyXcCqC6cY7wJyjn4VtmumpiKd4gDKDULhil4rgkURD-DbtaV0xF3oDLfGY7pNkPBBA_HBJ6bhwMvhTS1mkjpF7gfgwXOgeaS80i8cWgBx14F_HJSIxIcjYfUkdK5UuK69j4P4NOykfWODitF_FU3t5iT_SamCHV90BwZfCBWj07Twn6B-cvcof4sBqsHbOG-P13aOwNtn7IAR"/>
+</div>
+<div class="w-6 h-6 rounded-full bg-black flex items-center justify-center border-2 border-white dark:border-slate-800">
+<img alt="TikTok" class="w-3 h-3 invert" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAFFML9bNhf0kmO-U6zbT6ROTRfPy61GUEaQnB0hIV1UWPiogK4dXR8mTxMFDpXb7Th1RvDlVJfcYej7xIZtqI2Qz7lfrC_gld5HBEknrQqr6J5tw7OpaH1QM9UA1X6-RS-KUGyw5QOaGsZ6_-T-LqsqXY-R23GprvmS2yddxo4NHEHMnZmGjU1CCsmaK0h9eKU3xQvOiJWq4j18R4a2d900k244Rc7AVfDzwy_DX2ZrFWg33R2m-EVn86yOnMzc_Jp_p2EVO3yHKdx"/>
+</div>
+</div>
+<div class="flex gap-4">
+<button class="text-primary text-sm font-bold">Editar</button>
+<button class="text-slate-400 text-sm font-bold">Cancelar</button>
+</div>
+</div>
+</div>
+<!-- Post Card 2 -->
+<div class="bg-white dark:bg-slate-800 rounded-xl p-4 shadow-sm border border-slate-200 dark:border-slate-700 flex flex-col gap-3">
+<div class="flex gap-4">
+<div class="w-20 h-20 rounded-lg bg-cover bg-center shrink-0" data-alt="Minimalist laptop on a wooden desk with coffee" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDLZ-ZVJkwjFYyPHC3GczFZ7z2z1-UOkk4nVVaO8-O39-BtHTKoOdfJe-kfU2hMnURRM_dH4emxSPqlss8bK--Wc5MfH_O8pnHsXpdQ2yfLwSFwgfowrdZFns1x4-nqUOumJed2Nw-BYgjUCR1NTgpFabAhaAFGOAixyuexEJCw13ECB7xK936TbIvS7Fbv10Z5-Bw_Gh1hbFznooONPu1zZdoTabVAlHLuNl8saPcNIVP3rLwWAJVGEno4q0OWB0IHmfflPmsv9rT6')"></div>
+<div class="flex flex-col justify-between flex-1">
+<div>
+<p class="text-slate-900 dark:text-slate-100 text-sm font-medium line-clamp-2 leading-snug">
+                                Dicas de produtividade para quem trabalha em casa. Confira o novo blog post!
+                            </p>
+<p class="text-primary text-xs mt-1 font-semibold uppercase tracking-wider">26 Out, 09:00</p>
+</div>
+<div class="flex gap-2 mt-2">
+<span class="material-symbols-outlined text-slate-400 text-lg">link</span>
+</div>
+</div>
+</div>
+<div class="flex items-center justify-between pt-2 border-t border-slate-100 dark:border-slate-700">
+<div class="flex -space-x-2">
+<div class="w-6 h-6 rounded-full bg-blue-500 flex items-center justify-center border-2 border-white dark:border-slate-800">
+<img alt="Twitter" class="w-3 h-3 invert" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCWjoVijj9XRF24_sK1dFFQ-R6iCRDIj8Lxm-qk5CaEwgNWGFAON7Z8ixjhoJ7a_mRYDDOKzrql4YR_vsMgU92CZ0VVMY-n2pxuh4SZhmfZkX1JwMKHnGn2nHYTaHel1iORYdGt_LkRFW1sAj79rjlwCAhBZQbOEM3twP3kroeBD2E7KAA3YmEPVoKjUzTb8EotUqKgeLG2bZAE5RggLToSSnZ_AwY80JVGZt_vk38f0S9-OZWhsdoj_pt-wPDXJBYbqBRqKqmLWzul"/>
+</div>
+</div>
+<div class="flex gap-4">
+<button class="text-primary text-sm font-bold">Editar</button>
+<button class="text-slate-400 text-sm font-bold">Cancelar</button>
+</div>
+</div>
+</div>
+<!-- Post Card 3 -->
+<div class="bg-white dark:bg-slate-800 rounded-xl p-4 shadow-sm border border-slate-200 dark:border-slate-700 flex flex-col gap-3">
+<div class="flex gap-4">
+<div class="w-20 h-20 rounded-lg bg-cover bg-center shrink-0" data-alt="Cinematic camera setup on a movie set" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDKkzh0dCGNneqr8ESOmL5FGmxNlY8gdFe7SAy9TOaQNvxyQBDC2oakXIiwoMZfDWc7W1cKVqM3nZ9mSxJp8RjFR3tWf-6Vmnx8G0ElicRACx_6PQH2tibanTJH12xyCo6pliBsta_pDOxKrWgnrs5cIJSyercdunukkB8kAeo1dUEbDpPUkHDtUWpYjWFsCkV01DnCUIOnshk-VmoFoot3hpxxT59ndmV_TAPv9I67WFDgzjYig4VdPSwF44gCU0LlSUFZzsCs70m6')"></div>
+<div class="flex flex-col justify-between flex-1">
+<div>
+<p class="text-slate-900 dark:text-slate-100 text-sm font-medium line-clamp-2 leading-snug">
+                                Vlog de viagem: 5 lugares imperdíveis na Europa. Estreia em breve no canal!
+                            </p>
+<p class="text-primary text-xs mt-1 font-semibold uppercase tracking-wider">27 Out, 20:00</p>
+</div>
+<div class="flex gap-2 mt-2">
+<span class="material-symbols-outlined text-slate-400 text-lg">videocam</span>
+</div>
+</div>
+</div>
+<div class="flex items-center justify-between pt-2 border-t border-slate-100 dark:border-slate-700">
+<div class="flex -space-x-2">
+<div class="w-6 h-6 rounded-full bg-red-600 flex items-center justify-center border-2 border-white dark:border-slate-800">
+<img alt="YouTube" class="w-3 h-3 invert" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDcwrziXM2dyH2OINDEJGeNQtmT8n39Fk80y2qeyUt53dMcB3uvPtEZOXiKbUuj3GMfHSDM0NaIjJxLQ5Tia94uGIflthqLu4HkCjv19ky2NHxnnhHSR8bDxHVokWdY540vWfUUZTrJQrIBOx4q7-HvvmtpnSO_usecW_M4zikwNXOI1j29ugSiM1f51qKV3d7IGxthK0aN0zXiIgtOdPLXy1RIBZc1sIa-lH4a_WCitd_NTtL-kKJIdVFgjinesfSoFrxeRd3sE9o7"/>
+</div>
+</div>
+<div class="flex gap-4">
+<button class="text-primary text-sm font-bold">Editar</button>
+<button class="text-slate-400 text-sm font-bold">Cancelar</button>
+</div>
+</div>
+</div>
+</main>
+<!-- Bottom Navigation Bar -->
+<nav class="bg-white dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800 pb-8 pt-2 px-6 flex justify-between items-center shrink-0">
+<div class="flex flex-col items-center gap-1 text-slate-400">
+<span class="material-symbols-outlined">home</span>
+<span class="text-[10px] font-medium">Início</span>
+</div>
+<div class="flex flex-col items-center gap-1 text-primary">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1">calendar_month</span>
+<span class="text-[10px] font-medium">Posts</span>
+</div>
+<div class="bg-primary -mt-10 size-14 rounded-full flex items-center justify-center shadow-lg shadow-primary/40 text-white">
+<span class="material-symbols-outlined text-3xl">add</span>
+</div>
+<div class="flex flex-col items-center gap-1 text-slate-400">
+<span class="material-symbols-outlined">bar_chart</span>
+<span class="text-[10px] font-medium">Analytics</span>
+</div>
+<div class="flex flex-col items-center gap-1 text-slate-400">
+<span class="material-symbols-outlined">person</span>
+<span class="text-[10px] font-medium">Perfil</span>
+</div>
+</nav>
+<!-- Home Indicator (iOS style) -->
+<div class="absolute bottom-2 left-1/2 -translate-x-1/2 w-32 h-1 bg-slate-300 dark:bg-slate-700 rounded-full"></div>
+</div>
+</body></html>

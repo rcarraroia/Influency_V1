@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+
+<html class="light" lang="pt-br"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#660ce4",
+              "background-light": "#f7f5f8",
+              "background-dark": "#171022",
+            },
+            fontFamily: {
+              "display": ["Inter", "sans-serif"]
+            },
+            borderRadius: {"DEFAULT": "0.5rem", "lg": "1rem", "xl": "1.5rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<title>Saved Carousels List</title>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display antialiased text-slate-900 dark:text-slate-100">
+<div class="relative mx-auto flex h-[844px] w-[390px] flex-col overflow-hidden bg-background-light dark:bg-background-dark shadow-2xl border border-slate-200 dark:border-slate-800">
+<!-- Header -->
+<header class="sticky top-0 z-10 flex items-center justify-between bg-white dark:bg-slate-900 px-4 py-4 border-b border-slate-200 dark:border-slate-800">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary cursor-pointer">arrow_back</span>
+<h1 class="text-xl font-bold tracking-tight text-slate-900 dark:text-slate-100">Carrosséis Salvos</h1>
+</div>
+<span class="material-symbols-outlined text-slate-500">search</span>
+</header>
+<!-- Main Content (Scrollable List) -->
+<main class="flex-1 overflow-y-auto p-4 space-y-4 pb-24">
+<!-- Carousel Card 1 -->
+<div class="bg-white dark:bg-slate-900 rounded-xl overflow-hidden shadow-sm border border-slate-100 dark:border-slate-800">
+<div class="flex p-3 gap-4">
+<div class="h-24 w-24 shrink-0 rounded-lg bg-cover bg-center" data-alt="UI design tips carousel cover slide" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuA0By9nAcxLrnB_xaU6St3PJ1kHM4Mlk-jwbV9ac2HHs4m01GaPPMxq_S2c1iXUEUkC1_0m9gq3upL20iuEvOScZge6Hflx9UE1hfT40veJX61z_hJcEkGma6bLBeJFJdrpl4FCRpejicIbnoYG2dqDXrT8hfa-8s39uBnicLcKz3a7a2wBqkBLKJfj7eq-K35kpb5adjzKu2JFBvTR4UI2kNY-3S5Pk9bYXZBRRVTJkHBVTtXJ-1v4XtTAYBM6ZObDdchmmFVuX3Jk')"></div>
+<div class="flex flex-col justify-between flex-1">
+<div>
+<h3 class="font-bold text-slate-900 dark:text-slate-100 leading-tight">Dicas de UI Design</h3>
+<span class="inline-flex items-center rounded-full bg-primary/10 px-2 py-0.5 mt-1 text-xs font-medium text-primary">5 slides</span>
+</div>
+<div class="flex justify-end gap-3 pt-2">
+<button class="flex items-center gap-1 text-xs font-semibold text-slate-600 dark:text-slate-400">
+<span class="material-symbols-outlined text-sm">edit</span> Editar
+                            </button>
+<button class="flex items-center gap-1 text-xs font-semibold text-primary">
+<span class="material-symbols-outlined text-sm">send</span> Publicar
+                            </button>
+<button class="flex items-center gap-1 text-xs font-semibold text-red-500">
+<span class="material-symbols-outlined text-sm text-red-500">delete</span> Excluir
+                            </button>
+</div>
+</div>
+</div>
+</div>
+<!-- Carousel Card 2 -->
+<div class="bg-white dark:bg-slate-900 rounded-xl overflow-hidden shadow-sm border border-slate-100 dark:border-slate-800">
+<div class="flex p-3 gap-4">
+<div class="h-24 w-24 shrink-0 rounded-lg bg-cover bg-center" data-alt="Marketing trends 2024 carousel cover" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDNb4CzhVA43wCMl7iYiNO1VSPpltLkVEF9CJPanYRkTvAQRP_XqeUltXfmzg95vnkDhLsZORQwaFZgYKZEwwe2oQPDKi8Bp3Ar_9tdXyFITnpXDvhKOkpHqJFRrVu8n_QjFPSNW6DNJBZxmW4OzwgHLD0eVlhRdnzF5yTkTcX2wL0j1dBAOOPswXtxPDDkNmcvYsE_sPA4l_FUTdSqSbldozDPWA00aQOeFKs2q7trLdda6J1L9G_zmjbIKNw433_ss5R48X9NNGlQ')"></div>
+<div class="flex flex-col justify-between flex-1">
+<div>
+<h3 class="font-bold text-slate-900 dark:text-slate-100 leading-tight">Marketing Digital 2024</h3>
+<span class="inline-flex items-center rounded-full bg-primary/10 px-2 py-0.5 mt-1 text-xs font-medium text-primary">8 slides</span>
+</div>
+<div class="flex justify-end gap-3 pt-2">
+<button class="flex items-center gap-1 text-xs font-semibold text-slate-600 dark:text-slate-400">
+<span class="material-symbols-outlined text-sm">edit</span> Editar
+                            </button>
+<button class="flex items-center gap-1 text-xs font-semibold text-primary">
+<span class="material-symbols-outlined text-sm">send</span> Publicar
+                            </button>
+<button class="flex items-center gap-1 text-xs font-semibold text-red-500">
+<span class="material-symbols-outlined text-sm text-red-500">delete</span> Excluir
+                            </button>
+</div>
+</div>
+</div>
+</div>
+<!-- Carousel Card 3 -->
+<div class="bg-white dark:bg-slate-900 rounded-xl overflow-hidden shadow-sm border border-slate-100 dark:border-slate-800">
+<div class="flex p-3 gap-4">
+<div class="h-24 w-24 shrink-0 rounded-lg bg-cover bg-center" data-alt="Abstract colorful gradient carousel cover" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDsBmIAtv2Pics49-KXClkmqNY2A8_P-1CxrPPHA3dsuCsxun-d4B5Hy3lD_2qtPeXLPbK48pIp2xaAlGKG8Lwouy4je3K5Db-rhcxtP9JkbTuh2JTYrXo8ULECL31VI5Lgjzkm15N6XXeL4zzoLhlc_wjSB_yUowqksiRztMPOIkcPDFV4bFV1H_HXWlJwqlW-gXaIOyZ4NEi6qEEgeT0Cpe8074OHtGhGQgBkGyyB3tj86zYahe7C7tb3IdiCUEC1tg-ANwAxkKLT')"></div>
+<div class="flex flex-col justify-between flex-1">
+<div>
+<h3 class="font-bold text-slate-900 dark:text-slate-100 leading-tight">Guia de Cores</h3>
+<span class="inline-flex items-center rounded-full bg-primary/10 px-2 py-0.5 mt-1 text-xs font-medium text-primary">6 slides</span>
+</div>
+<div class="flex justify-end gap-3 pt-2">
+<button class="flex items-center gap-1 text-xs font-semibold text-slate-600 dark:text-slate-400">
+<span class="material-symbols-outlined text-sm">edit</span> Editar
+                            </button>
+<button class="flex items-center gap-1 text-xs font-semibold text-primary">
+<span class="material-symbols-outlined text-sm">send</span> Publicar
+                            </button>
+<button class="flex items-center gap-1 text-xs font-semibold text-red-500">
+<span class="material-symbols-outlined text-sm text-red-500">delete</span> Excluir
+                            </button>
+</div>
+</div>
+</div>
+</div>
+<!-- Carousel Card 4 -->
+<div class="bg-white dark:bg-slate-900 rounded-xl overflow-hidden shadow-sm border border-slate-100 dark:border-slate-800">
+<div class="flex p-3 gap-4">
+<div class="h-24 w-24 shrink-0 rounded-lg bg-cover bg-center" data-alt="Typography principles carousel preview slide" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCUqPJUC7-N9jHn0sOfXUmvsSLUnQImKGqF2TYfy0Eqv_T4ykJPK2x8yTUeAnZXPRqHR-2v4hzat6hXQih6ZCv-WnyiuYc28XEKzMz37g0CA_N01GRWaOEdc4OvjJApkRTyqwRmlwbH_ibr9vlZRGluYCHObMOYtHCqCOsGiZlxJmrhTX3qy7u4YLOEuVxp-Cn3pUN5G8l3-lDRhcCjhN880eD_yr6kAOr_b-E_BPyVaVojB5Ym112Ob27u40RMdqmjphJcEM1HqfjB')"></div>
+<div class="flex flex-col justify-between flex-1">
+<div>
+<h3 class="font-bold text-slate-900 dark:text-slate-100 leading-tight">Princípios Tipográficos</h3>
+<span class="inline-flex items-center rounded-full bg-primary/10 px-2 py-0.5 mt-1 text-xs font-medium text-primary">10 slides</span>
+</div>
+<div class="flex justify-end gap-3 pt-2">
+<button class="flex items-center gap-1 text-xs font-semibold text-slate-600 dark:text-slate-400">
+<span class="material-symbols-outlined text-sm">edit</span> Editar
+                            </button>
+<button class="flex items-center gap-1 text-xs font-semibold text-primary">
+<span class="material-symbols-outlined text-sm">send</span> Publicar
+                            </button>
+<button class="flex items-center gap-1 text-xs font-semibold text-red-500">
+<span class="material-symbols-outlined text-sm text-red-500">delete</span> Excluir
+                            </button>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Floating Action Button -->
+<button class="absolute bottom-24 right-6 flex h-14 w-14 items-center justify-center rounded-full bg-primary text-white shadow-lg shadow-primary/40 transition-transform hover:scale-105 active:scale-95">
+<span class="material-symbols-outlined text-3xl">add</span>
+</button>
+<!-- Bottom Navigation Bar -->
+<nav class="absolute bottom-0 left-0 right-0 flex items-center justify-around border-t border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 px-2 pb-6 pt-2">
+<a class="flex flex-1 flex-col items-center gap-1 text-slate-400" href="#">
+<span class="material-symbols-outlined">home</span>
+<p class="text-[10px] font-medium leading-none">Início</p>
+</a>
+<a class="flex flex-1 flex-col items-center gap-1 text-primary" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1">library_books</span>
+<p class="text-[10px] font-medium leading-none">Biblioteca</p>
+</a>
+<a class="flex flex-1 flex-col items-center gap-1 text-slate-400" href="#">
+<span class="material-symbols-outlined">auto_awesome</span>
+<p class="text-[10px] font-medium leading-none">Criar</p>
+</a>
+<a class="flex flex-1 flex-col items-center gap-1 text-slate-400" href="#">
+<span class="material-symbols-outlined">person</span>
+<p class="text-[10px] font-medium leading-none">Perfil</p>
+</a>
+</nav>
+<!-- iOS Notch/Home Indicator Sim -->
+<div class="absolute bottom-1 left-1/2 h-1 w-32 -translate-x-1/2 rounded-full bg-slate-300 dark:bg-slate-700"></div>
+</div>
+</body></html>

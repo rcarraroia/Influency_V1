@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Upload Asset Modal - Influency</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#660ce4",
+                        "background-light": "#f7f5f8",
+                        "background-dark": "#171022",
+                    },
+                    fontFamily: {
+                        "display": ["Public Sans", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.5rem",
+                        "lg": "1rem",
+                        "xl": "1.5rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display">
+<!-- Mobile Wrapper (390x844px context) -->
+<div class="relative mx-auto h-[844px] w-[390px] overflow-hidden bg-slate-200 shadow-2xl">
+<!-- Mock Background Content (Simulating the Influency App Dashboard) -->
+<div class="absolute inset-0 bg-background-light p-6">
+<header class="flex items-center justify-between mb-8">
+<div class="h-8 w-32 bg-primary/10 rounded-lg"></div>
+<div class="h-10 w-10 bg-primary/10 rounded-full"></div>
+</header>
+<div class="space-y-4">
+<div class="h-40 w-full bg-primary/5 rounded-xl border border-primary/10"></div>
+<div class="h-24 w-full bg-primary/5 rounded-xl border border-primary/10"></div>
+<div class="h-24 w-full bg-primary/5 rounded-xl border border-primary/10"></div>
+<div class="h-24 w-full bg-primary/5 rounded-xl border border-primary/10"></div>
+</div>
+</div>
+<!-- Dimmed Overlay -->
+<div class="absolute inset-0 flex flex-col justify-end bg-slate-900/60 transition-opacity">
+<!-- Bottom Sheet / Modal -->
+<div class="flex flex-col items-stretch bg-white dark:bg-background-dark rounded-t-xl overflow-hidden shadow-2xl">
+<!-- BottomSheetHandle -->
+<button class="flex h-6 w-full items-center justify-center pt-2">
+<div class="h-1.5 w-12 rounded-full bg-primary/20"></div>
+</button>
+<div class="flex-1 pb-10">
+<!-- Title -->
+<h2 class="text-slate-900 dark:text-slate-100 text-[22px] font-bold leading-tight tracking-tight px-6 pb-2 pt-4">
+                        Upload Asset
+                    </h2>
+<p class="px-6 pb-6 text-sm text-slate-500 dark:text-slate-400">
+                        Add a new image or logo to your brand library.
+                    </p>
+<!-- Image Picker Area -->
+<div class="px-6 pb-6">
+<div class="flex flex-col items-center gap-6 rounded-xl border-2 border-dashed border-primary/30 bg-primary/5 px-6 py-12 transition-colors hover:bg-primary/10 cursor-pointer">
+<div class="flex h-16 w-16 items-center justify-center rounded-full bg-primary/10 text-primary">
+<span class="material-symbols-outlined text-4xl">cloud_upload</span>
+</div>
+<div class="flex flex-col items-center gap-2">
+<p class="text-slate-900 dark:text-slate-100 text-lg font-semibold text-center">
+                                    Select Image
+                                </p>
+<p class="text-slate-500 dark:text-slate-400 text-sm font-normal text-center px-4">
+                                    Tap to browse your brand assets or drag and drop files here
+                                </p>
+</div>
+<!-- Preview Placeholder (Simulated) -->
+<div class="hidden w-full aspect-video bg-slate-100 rounded-lg overflow-hidden relative">
+<img class="w-full h-full object-cover" data-alt="Abstract purple gradient background pattern" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBTHZGu-hV_mi6sI3145nfx4Wj5bEbWkDEL3KkEKk7cr9kuxGe_QfTpYyouC7PNzz47aK1UpVQCN2_OAUi8U35SczBAJavqHnqQMh0Ys5rsJ_Fvkaz2poCID89m8CUkkF2IsNtIogmOOBx-wIOCI8AftQGfoBgA8CvSmTmxNOTecdhgB1sqjvbBBwk3z5S5DJBkTtKweBvrY8cWWZaRkgT39s3lTlLgnV4bYMhW16xrBGr5PpwLL0OuY-bX54B3n7USiAj4GnZ0jN2x"/>
+<button class="absolute top-2 right-2 h-8 w-8 bg-black/50 text-white rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined text-sm">close</span>
+</button>
+</div>
+<button class="flex min-w-[120px] cursor-pointer items-center justify-center rounded-full h-11 px-6 bg-primary/10 text-primary text-sm font-bold transition-all hover:bg-primary/20">
+<span class="material-symbols-outlined mr-2 text-lg">attach_file</span>
+<span class="truncate">Choose File</span>
+</button>
+</div>
+</div>
+<!-- Actions -->
+<div class="px-6 flex flex-col gap-3">
+<button class="flex w-full cursor-pointer items-center justify-center rounded-xl h-12 px-6 bg-primary text-white text-base font-bold shadow-lg shadow-primary/20 active:scale-[0.98] transition-all">
+<span class="truncate">Upload</span>
+</button>
+<button class="flex w-full cursor-pointer items-center justify-center rounded-xl h-12 px-6 border-2 border-primary/20 bg-transparent text-slate-700 dark:text-slate-300 text-base font-bold active:scale-[0.98] transition-all">
+<span class="truncate">Cancelar</span>
+</button>
+</div>
+</div>
+<!-- Safe Area Indicator for iOS -->
+<div class="h-8 w-full bg-white dark:bg-background-dark"></div>
+</div>
+</div>
+<!-- Status Bar Mock -->
+<div class="absolute top-0 w-full h-11 px-6 flex items-center justify-between text-slate-900 pointer-events-none">
+<span class="text-sm font-semibold">9:41</span>
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-lg">signal_cellular_4_bar</span>
+<span class="material-symbols-outlined text-lg">wifi</span>
+<span class="material-symbols-outlined text-xl">battery_full</span>
+</div>
+</div>
+</div>
+</body></html>

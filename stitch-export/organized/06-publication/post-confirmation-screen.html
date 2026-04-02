@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#660ce4",
+                        "background-light": "#f7f5f8",
+                        "background-dark": "#171022",
+                    },
+                    fontFamily: {
+                        "display": ["Plus Jakarta Sans"]
+                    },
+                    borderRadius: {"DEFAULT": "0.5rem", "lg": "1rem", "xl": "1.5rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark min-h-screen flex justify-center items-center">
+<!-- Mobile Container (390x844px aspect simulation) -->
+<div class="relative w-full max-w-[390px] h-[844px] bg-white dark:bg-slate-900 shadow-2xl flex flex-col overflow-hidden rounded-[40px] border-[8px] border-slate-900 dark:border-slate-800">
+<!-- Top App Bar -->
+<div class="flex items-center justify-between px-6 pt-12 pb-4">
+<button class="text-slate-900 dark:text-slate-100 p-2 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-full transition-colors">
+<span class="material-symbols-outlined">close</span>
+</button>
+<h2 class="text-slate-900 dark:text-slate-100 text-lg font-bold leading-tight tracking-tight">Confirmação</h2>
+<div class="w-10"></div> <!-- Spacer for centering -->
+</div>
+<!-- Success Animation Placeholder -->
+<div class="flex flex-col items-center justify-center pt-8 pb-4">
+<div class="relative flex items-center justify-center">
+<div class="absolute w-32 h-32 bg-green-100 dark:bg-green-900/30 rounded-full"></div>
+<div class="relative flex items-center justify-center w-24 h-24 bg-green-500 rounded-full text-white shadow-lg shadow-green-200 dark:shadow-none">
+<span class="material-symbols-outlined text-5xl font-bold">check</span>
+</div>
+</div>
+<h1 class="text-slate-900 dark:text-slate-100 text-[28px] font-bold leading-tight mt-8 px-6 text-center">Publicado com sucesso!</h1>
+<p class="text-slate-500 dark:text-slate-400 text-sm mt-2 text-center px-8">Seu conteúdo já está disponível para sua audiência.</p>
+</div>
+<!-- Shared Networks -->
+<div class="flex-1 px-6 mt-6">
+<h3 class="text-slate-900 dark:text-slate-100 text-sm font-bold uppercase tracking-wider mb-4 opacity-60">Redes compartilhadas</h3>
+<div class="space-y-3">
+<!-- Instagram Card -->
+<div class="flex items-center justify-between p-4 bg-slate-50 dark:bg-slate-800/50 rounded-xl border border-slate-100 dark:border-slate-700">
+<div class="flex items-center gap-3">
+<div class="flex items-center justify-center w-10 h-10 rounded-lg bg-gradient-to-tr from-[#f9ce34] via-[#ee2a7b] to-[#6228d7] text-white">
+<span class="material-symbols-outlined text-2xl">photo_camera</span>
+</div>
+<span class="text-slate-900 dark:text-slate-100 font-semibold">Instagram</span>
+</div>
+<button class="text-primary font-bold text-sm hover:underline">Ver post</button>
+</div>
+<!-- TikTok Card -->
+<div class="flex items-center justify-between p-4 bg-slate-50 dark:bg-slate-800/50 rounded-xl border border-slate-100 dark:border-slate-700">
+<div class="flex items-center gap-3">
+<div class="flex items-center justify-center w-10 h-10 rounded-lg bg-black text-white">
+<span class="material-symbols-outlined text-2xl">music_note</span>
+</div>
+<span class="text-slate-900 dark:text-slate-100 font-semibold">TikTok</span>
+</div>
+<button class="text-primary font-bold text-sm hover:underline">Ver post</button>
+</div>
+</div>
+<!-- Preview/Decoration Image -->
+<div class="mt-8 rounded-xl overflow-hidden relative group">
+<div class="w-full h-32 bg-primary/10 flex items-center justify-center overflow-hidden">
+<div class="w-full h-full bg-cover bg-center opacity-80" data-alt="Screenshot preview of the published social media post content" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAsN0SCF7ti9MZDAkxnV0DsjcskZd1Q4gIgz_z2R8Jl8pE8zWJewI3jLlxseNCXL_IMD5ctPfxim1Qp21czBhTRRhclGfgYqJpxWK-kVurD_txBgYgujy27HElmoTVZofol5yVA8gEPMCM_F5-JMYAgRCT4_q-5PGUjN6okU0JAavr-WBIkMZv7xgTAuzf_w6FCdjfBHlozgh9_tRNW_cJtA4wpkFsezi33qizWIWd15jlt3xvurrCuDBt2nm0RxZbrctPZBfSQt7KS')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
+<div class="absolute bottom-3 left-4 text-white text-xs font-medium flex items-center gap-2">
+<span class="material-symbols-outlined text-sm">visibility</span>
+                        Visualização rápida
+                    </div>
+</div>
+</div>
+</div>
+<!-- Bottom Actions -->
+<div class="px-6 pb-12 pt-4 bg-white dark:bg-slate-900 border-t border-slate-100 dark:border-slate-800 space-y-3">
+<button class="w-full bg-primary hover:bg-primary/90 text-white font-bold py-4 rounded-xl shadow-lg shadow-primary/20 transition-all flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-xl">bar_chart</span>
+                Ver Analytics
+            </button>
+<button class="w-full bg-transparent border-2 border-primary/30 hover:border-primary text-primary font-bold py-4 rounded-xl transition-all flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-xl">add_circle</span>
+                Criar novo conteúdo
+            </button>
+</div>
+<!-- iOS Home Indicator -->
+<div class="absolute bottom-2 left-1/2 -translate-x-1/2 w-32 h-1.5 bg-slate-300 dark:bg-slate-700 rounded-full"></div>
+</div>
+</body></html>

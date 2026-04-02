@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="pt-br"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Edit Slide Modal - Influency</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#660ce4",
+                        "background-light": "#f7f5f8",
+                        "background-dark": "#171022",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.5rem",
+                        "lg": "1rem",
+                        "xl": "1.5rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display">
+<div class="relative flex h-screen w-full flex-col bg-background-light dark:bg-background-dark overflow-hidden">
+<!-- Background Content (Simulated) -->
+<div class="absolute inset-0 z-0 p-6 opacity-40 pointer-events-none">
+<div class="flex items-center justify-between mb-8">
+<div class="h-8 w-32 bg-slate-300 dark:bg-slate-700 rounded-lg"></div>
+<div class="h-10 w-10 bg-slate-300 dark:bg-slate-700 rounded-full"></div>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<div class="h-40 bg-slate-300 dark:bg-slate-700 rounded-xl"></div>
+<div class="h-40 bg-slate-300 dark:bg-slate-700 rounded-xl"></div>
+<div class="h-40 bg-slate-300 dark:bg-slate-700 rounded-xl"></div>
+<div class="h-40 bg-slate-300 dark:bg-slate-700 rounded-xl"></div>
+</div>
+</div>
+<!-- Backdrop Overlay -->
+<div class="absolute inset-0 z-10 bg-slate-900/60 flex flex-col justify-end">
+<!-- Modal Container (BottomSheet Style) -->
+<div class="flex flex-col items-stretch bg-white dark:bg-background-dark rounded-t-xl shadow-2xl animate-in fade-in slide-in-from-bottom-10 duration-300">
+<!-- BottomSheetHandle -->
+<div class="flex h-6 w-full items-center justify-center">
+<div class="h-1.5 w-12 rounded-full bg-slate-200 dark:bg-primary/30"></div>
+</div>
+<!-- Modal Header -->
+<div class="flex items-center px-4 py-2 justify-between border-b border-slate-100 dark:border-primary/10">
+<div class="text-slate-900 dark:text-slate-100 flex size-10 items-center justify-center cursor-pointer">
+<span class="material-symbols-outlined" data-icon="close">close</span>
+</div>
+<h2 class="text-slate-900 dark:text-white text-lg font-bold leading-tight flex-1 text-center pr-10">Editar Slide</h2>
+</div>
+<!-- Scrollable Content Area -->
+<div class="flex-1 overflow-y-auto max-h-[75vh]">
+<div class="p-4 space-y-6">
+<!-- Slide Preview Section -->
+<div class="space-y-3">
+<h3 class="text-slate-700 dark:text-slate-300 text-sm font-semibold uppercase tracking-wider">Prévia do Slide</h3>
+<div class="w-full aspect-video rounded-xl overflow-hidden border-2 border-primary/20 bg-slate-100 dark:bg-slate-800 relative group">
+<div class="absolute inset-0 bg-cover bg-center" data-alt="Vibrant social media interface preview on screen" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuD9tmUesHdibfVNTaKwnc6oWTsWFupcTszeqwCtS7au1j3R9b6QWha5XiyJVpocLCrPd_bfGutPRToLKyqzzuLWqKk8VKzl-IuGtdl_6A8buP3Axqla7cUirgz2UXRGw00tLjDGOnf5xIWtjKELI085JWcVNmzLaTrAUMFC8QkwOr11dIeyNWIO40ZOn3Cw9cgWDqVwYyMzerxzKR464Bb1-f1sTsA0wsQ_SV92uA3b26qiMQ3HsueBb3rTFr-stYLuP2NnExVLvsgS');"></div>
+<div class="absolute inset-0 bg-slate-900/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+<button class="bg-white/20 backdrop-blur-md text-white px-4 py-2 rounded-full flex items-center gap-2 border border-white/30">
+<span class="material-symbols-outlined text-sm">photo_camera</span>
+<span class="text-xs font-medium">Trocar Imagem</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Form Fields -->
+<div class="space-y-4">
+<!-- Input Title -->
+<div class="flex flex-col gap-2">
+<label class="text-slate-700 dark:text-slate-300 text-sm font-medium">Título do slide</label>
+<input class="w-full rounded-xl border-slate-200 dark:border-primary/20 bg-slate-50 dark:bg-primary/5 text-slate-900 dark:text-white focus:border-primary focus:ring-primary h-12 px-4 transition-all" placeholder="Ex: Como crescer no Instagram" type="text" value="Estratégias de Engajamento"/>
+</div>
+<!-- Textarea Content -->
+<div class="flex flex-col gap-2">
+<label class="text-slate-700 dark:text-slate-300 text-sm font-medium">Conteúdo</label>
+<textarea class="w-full rounded-xl border-slate-200 dark:border-primary/20 bg-slate-50 dark:bg-primary/5 text-slate-900 dark:text-white focus:border-primary focus:ring-primary min-h-[120px] p-4 resize-none transition-all" placeholder="Escreva o conteúdo do slide aqui...">O engajamento é a chave para o sucesso. Aprenda a interagir com sua audiência de forma autêntica e constante para elevar seus números.</textarea>
+</div>
+</div>
+</div>
+</div>
+<!-- Footer Buttons -->
+<div class="p-4 bg-white dark:bg-background-dark border-t border-slate-100 dark:border-primary/10 flex gap-3">
+<button class="flex-1 h-12 border-2 border-primary text-primary font-bold rounded-xl hover:bg-primary/5 transition-colors">
+                        Cancelar
+                    </button>
+<button class="flex-1 h-12 bg-primary text-white font-bold rounded-xl hover:bg-primary/90 transition-colors shadow-lg shadow-primary/20">
+                        Salvar
+                    </button>
+</div>
+<!-- Home Indicator Safe Area (iOS style) -->
+<div class="h-6 w-full"></div>
+</div>
+</div>
+</div>
+</body></html>

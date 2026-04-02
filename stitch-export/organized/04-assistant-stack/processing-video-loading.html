@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#660ce4",
+                        "background-light": "#f7f5f8",
+                        "background-dark": "#171022",
+                    },
+                    fontFamily: {
+                        "display": ["Plus Jakarta Sans"]
+                    },
+                    borderRadius: {"DEFAULT": "0.5rem", "lg": "1rem", "xl": "1.5rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<title>Processing Video Loading</title>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display flex justify-center items-center min-h-screen">
+<!-- Mobile Container (390x844px) -->
+<div class="relative w-[390px] h-[844px] bg-white dark:bg-slate-950 shadow-2xl overflow-hidden flex flex-col border border-slate-200 dark:border-slate-800">
+<!-- Header / TopAppBar -->
+<div class="flex items-center p-4 pt-12 pb-2 justify-between">
+<div class="text-slate-900 dark:text-slate-100 flex size-10 shrink-0 items-center justify-center rounded-full hover:bg-slate-100 dark:hover:bg-slate-800 cursor-pointer">
+<span class="material-symbols-outlined">arrow_back</span>
+</div>
+<h2 class="text-slate-900 dark:text-slate-100 text-lg font-bold leading-tight tracking-tight flex-1 text-center pr-10">Processando Vídeo</h2>
+</div>
+<!-- Main Content Area -->
+<div class="flex-1 flex flex-col px-6 py-8">
+<!-- Central Animation Visual Placeholder -->
+<div class="flex flex-col items-center justify-center mb-12">
+<div class="relative flex items-center justify-center">
+<!-- Outer rotating ring effect -->
+<div class="w-32 h-32 rounded-full border-4 border-primary/20 flex items-center justify-center">
+<div class="absolute inset-0 w-32 h-32 rounded-full border-t-4 border-primary animate-spin"></div>
+<div class="text-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-5xl">movie_edit</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Vertical Progress List -->
+<div class="space-y-0">
+<!-- Step 1: Transcrevendo (Done) -->
+<div class="flex gap-4">
+<div class="flex flex-col items-center">
+<div class="text-emerald-500 bg-emerald-50 dark:bg-emerald-500/10 rounded-full p-1">
+<span class="material-symbols-outlined text-[24px]">check_circle</span>
+</div>
+<div class="w-[2px] h-10 bg-emerald-500/30"></div>
+</div>
+<div class="flex flex-col pt-1">
+<p class="text-slate-900 dark:text-slate-100 text-base font-semibold leading-none">Transcrevendo</p>
+<p class="text-emerald-600 dark:text-emerald-400 text-sm mt-1">Concluído</p>
+</div>
+</div>
+<!-- Step 2: Legendas (Done) -->
+<div class="flex gap-4">
+<div class="flex flex-col items-center">
+<div class="text-emerald-500 bg-emerald-50 dark:bg-emerald-500/10 rounded-full p-1">
+<span class="material-symbols-outlined text-[24px]">check_circle</span>
+</div>
+<div class="w-[2px] h-10 bg-emerald-500/30"></div>
+</div>
+<div class="flex flex-col pt-1">
+<p class="text-slate-900 dark:text-slate-100 text-base font-semibold leading-none">Legendas</p>
+<p class="text-emerald-600 dark:text-emerald-400 text-sm mt-1">Concluído</p>
+</div>
+</div>
+<!-- Step 3: Música (In Progress) -->
+<div class="flex gap-4">
+<div class="flex flex-col items-center">
+<div class="text-primary bg-primary/10 rounded-full p-1">
+<span class="material-symbols-outlined text-[24px] animate-spin">progress_activity</span>
+</div>
+<div class="w-[2px] h-10 bg-slate-200 dark:bg-slate-800"></div>
+</div>
+<div class="flex flex-col pt-1">
+<p class="text-slate-900 dark:text-slate-100 text-base font-semibold leading-none">Música</p>
+<p class="text-primary text-sm mt-1 font-medium">60% processando...</p>
+</div>
+</div>
+<!-- Step 4: Finalizando (Pending) -->
+<div class="flex gap-4">
+<div class="flex flex-col items-center">
+<div class="text-slate-300 dark:text-slate-700 rounded-full p-1">
+<span class="material-symbols-outlined text-[24px]">circle</span>
+</div>
+</div>
+<div class="flex flex-col pt-1">
+<p class="text-slate-400 dark:text-slate-600 text-base font-semibold leading-none">Finalizando</p>
+<p class="text-slate-300 dark:text-slate-700 text-sm mt-1">Aguardando</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Footer Progress Section -->
+<div class="p-6 pb-12 bg-white dark:bg-slate-950 border-t border-slate-100 dark:border-slate-800">
+<div class="flex justify-between items-center mb-3">
+<p class="text-slate-900 dark:text-slate-100 text-base font-bold">Processando vídeo...</p>
+<p class="text-primary text-base font-bold">60%</p>
+</div>
+<div class="w-full bg-primary/10 rounded-full h-3 mb-6">
+<div class="bg-primary h-3 rounded-full" style="width: 60%"></div>
+</div>
+<p class="text-slate-500 dark:text-slate-400 text-sm text-center mb-6 leading-relaxed">
+                Por favor, aguarde enquanto finalizamos seu conteúdo. Não feche o app.
+            </p>
+<button class="w-full flex items-center justify-center h-12 rounded-xl text-slate-500 dark:text-slate-400 font-bold text-sm bg-transparent border border-slate-200 dark:border-slate-800 hover:bg-slate-50 dark:hover:bg-slate-900 transition-colors">
+                Cancelar Processamento
+            </button>
+</div>
+<!-- iOS Indicator -->
+<div class="absolute bottom-2 left-1/2 -translate-x-1/2 w-32 h-1 bg-slate-200 dark:bg-slate-800 rounded-full"></div>
+</div>
+</body></html>
